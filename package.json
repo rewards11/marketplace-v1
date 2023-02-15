@@ -1,11 +1,10 @@
 {
   "name": "sample-marketplace",
   "scripts": {
-    "dev": "next dev",
-    "prettier": "prettier --write .",
+   "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node server.js",
+    "now-build": "next build"
   },
   "dependencies": {
     "@datadog/browser-rum": "^4.2.0",
