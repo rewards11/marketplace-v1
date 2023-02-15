@@ -9,7 +9,6 @@ import Footer from 'components/Footer'
 import { useMediaQuery } from '@react-hookz/web'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-
 // Environment variables
 // For more information about these variables
 // refer to the README.md file on this repository
@@ -17,7 +16,6 @@ import { useRouter } from 'next/router'
 // REQUIRED
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 const RESERVOIR_API_BASE = process.env.NEXT_PUBLIC_RESERVOIR_API_BASE
-
 // OPTIONAL
 const RESERVOIR_API_KEY = process.env.NEXT_PUBLIC_RESERVOIR_API_KEY
 const REDIRECT_HOMEPAGE = process.env.NEXT_PUBLIC_REDIRECT_HOMEPAGE
@@ -28,9 +26,7 @@ const TAGLINE = process.env.NEXT_PUBLIC_TAGLINE
 const COLLECTION = process.env.NEXT_PUBLIC_COLLECTION
 const COMMUNITY = process.env.NEXT_PUBLIC_COMMUNITY
 const COLLECTION_SET_ID = process.env.NEXT_PUBLIC_COLLECTION_SET_ID
-
 type Props = InferGetStaticPropsType<typeof getStaticProps>
-
 const metadata = {
   title: (title: string) => <title>{title}</title>,
   description: (description: string) => (
@@ -51,31 +47,25 @@ const metadata = {
     return null
   },
 }
-
 const Home: NextPage<Props> = ({ fallback }) => {
   const isSmallDevice = useMediaQuery('only screen and (max-width : 600px)')
   const router = useRouter()
-
   const title = META_TITLE && metadata.title(META_TITLE)
   const description = META_DESCRIPTION && metadata.description(META_DESCRIPTION)
   const image = metadata.image(META_IMAGE)
   const tagline = metadata.tagline(TAGLINE)
-
   useEffect(() => {
     if (REDIRECT_HOMEPAGE && COLLECTION) {
       router.push(`/collections/${COLLECTION}`)
     }
   }, [COLLECTION, REDIRECT_HOMEPAGE])
-
   // Return error page if the API base url or the environment's
   // chain ID are missing
   if (!CHAIN_ID) {
     console.debug({ CHAIN_ID })
     return <div>There was an error</div>
   }
-
   if (REDIRECT_HOMEPAGE && COLLECTION) return null
-
   return (
     <Layout navbar={{}}>
       <Head>
@@ -99,39 +89,30 @@ const Home: NextPage<Props> = ({ fallback }) => {
     </Layout>
   )
 }
-
 export default Home
-
 export const getStaticProps: GetStaticProps<{
   fallback: {
     collections: paths['/collections/v5']['get']['responses']['200']['schema']
   }
 }> = async () => {
   const options: RequestInit | undefined = {}
-
   if (RESERVOIR_API_KEY) {
     options.headers = {
       'x-api-key': RESERVOIR_API_KEY,
     }
   }
-
   const url = new URL('/collections/v5', RESERVOIR_API_BASE)
-
   let query: paths['/collections/v5']['get']['parameters']['query'] = {
     limit: 20,
     sortBy: '1DayVolume',
     normalizeRoyalties: true,
   }
-
   if (COLLECTION && !COMMUNITY) query.contract = [COLLECTION]
   if (COMMUNITY) query.community = COMMUNITY
   if (COLLECTION_SET_ID) query.collectionsSetId = COLLECTION_SET_ID
-
   const href = setParams(url, query)
   const res = await fetch(href, options)
-
   const collections = (await res.json()) as Props['fallback']['collections']
-
   return {
     props: {
       fallback: {
