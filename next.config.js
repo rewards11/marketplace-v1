@@ -10,11 +10,11 @@ const nextConfig = {
         destination: '/market',
         permanent: true,
       },
-      {
-        source: '/metadata',
-        destination: '/metadata/pages',
-        permanent: true,
-      },
+      // {
+      //   source: '/metadata',
+      //   destination: '/metadata/pages',
+      //   permanent: true,
+      // },
     ]
   },
 };
