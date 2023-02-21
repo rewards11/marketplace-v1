@@ -126,8 +126,6 @@ export default function Home() {
             </div>
           </Slider>
         </div>
-
-
         <div className={styles.th_sec}>
           <div className={styles.th_sec_m}>
 
