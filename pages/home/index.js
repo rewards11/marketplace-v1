@@ -63,50 +63,50 @@ export default function Home() {
 
       <main className={styles.main}>
         {/* <div className="carousel">
-          <style jsx>{`
-    .carousel {
-      width: 100%;
-      height: 500px;
-      overflow: hidden;
-      position: relative;
-    }
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .carousel img.active {
-      opacity: 1;
-    }
-  `}
-          </style>
-          <div style={{width:"100%"}}>
-          <Image className={styles.img_car} src={images[currentIndex]} alt="carousel image" />
-        </div>
-        </div> */}
+                  <style jsx>{`
+                  .carousel {
+                    width: 100%;
+                    height: 500px;
+                    overflow: hidden;
+                    position: relative;
+                  }
+                  .carousel img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                  }
+                  .carousel img.active {
+                    opacity: 1;
+                  }
+                `}
+                  </style>
+                  <div style={{width:"100%"}}>
+                  <Image className={styles.img_car} src={images[currentIndex]} alt="carousel image" />
+                </div>
+                </div> */}
         {/* <Carousel style={{width:"100%"}}>
-          <div  style={{width:"100%"}}>
-            <Image className={styles.img_car} src={require('../../public/ca1.png')} ></Image>
-          </div>
-          <div style={{width:"100%"}}>
-            <Image className={styles.img_car} src={require('../../public/ca2.png')} ></Image>
-          </div>
-          <div style={{width:"100%"}}>
-            <Image className={styles.img_car} src={require('../../public/ca3.jpg')} ></Image>
-          </div>
-          <div style={{width:"100%"}}>
-            <Image className={styles.img_car} src={require('../../public/ca4.png')} ></Image>
-          </div>
-        </Carousel>  */}
+                  <div  style={{width:"100%"}}>
+                    <Image className={styles.img_car} src={require('../../public/ca1.png')} ></Image>
+                  </div>
+                  <div style={{width:"100%"}}>
+                    <Image className={styles.img_car} src={require('../../public/ca2.png')} ></Image>
+                  </div>
+                  <div style={{width:"100%"}}>
+                    <Image className={styles.img_car} src={require('../../public/ca3.jpg')} ></Image>
+                  </div>
+                  <div style={{width:"100%"}}>
+                    <Image className={styles.img_car} src={require('../../public/ca4.png')} ></Image>
+                  </div>
+                </Carousel>  */}
         {/* <div className={styles.carousel}>
-          <Image className={styles.img_car} src={require('../../public/ca1.png')} ></Image>
-          <Image className={styles.img_car} src={require('../../public/ca2.png')} ></Image>
-          <Image className={styles.img_car} src={require('../../public/ca3.jpg')} ></Image>
-        </div> */}
+                  <Image className={styles.img_car} src={require('../../public/ca1.png')} ></Image>
+                  <Image className={styles.img_car} src={require('../../public/ca2.png')} ></Image>
+                  <Image className={styles.img_car} src={require('../../public/ca3.jpg')} ></Image>
+                </div> */}
 
 
         <div className={styles.carouselContainer}>
@@ -127,6 +127,33 @@ export default function Home() {
           </Slider>
         </div>
 
+
+        <div className={styles.th_sec}>
+          <div className={styles.th_sec_m}>
+
+            <div className={styles.th_sec_mf}>
+              <div className={styles.th_sec_mf1}>
+
+                <h5 className={styles.mf1_h5}>The Rewards11 NFT-based loyalty program is set to become the new standard in loyalty rewards programs. With its unique approach to loyalty rewards and its ability to create valuable digital assets for customers, this program is sure to become a popular choice for brands looking to enhance their loyalty offerings. </h5>
+                <h4 style={{ textAlign: 'center' }}>
+                  <br />
+
+                </h4>
+                <p style={{ marginBottom: '1rem' }}>
+                  <Link className={styles.learn_more_btn} href='/learn-more'>Learn More</Link>
+                </p>
+
+              </div>
+
+              <div className={styles.th_sec_mf2}>
+                <Image className={styles.img_mx} src={require('../../public/dotmover.svg')}></Image>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
         <div style={{ paddingTop: 12, backgroundColor: '#5D679F' }}>
           <div className={styles.sp}>
             <p style={{ marginBottom: '1rem' }}></p>
@@ -143,7 +170,7 @@ export default function Home() {
                 <div className={styles.mc1_a1_1}>
                   <Image className={styles.img_a1} src={require('../../public/Slide1.jpg')} ></Image>
                   <div className={styles.mc1_a1_2}>
-                    <h3 style={{fontSize:'2.25rem'}}>
+                    <h3 style={{ fontSize: '2.25rem' }}>
                       Our mission
                     </h3>
                     <p>
@@ -160,7 +187,7 @@ export default function Home() {
                 <div className={styles.mc1_a1_1}>
                   <Image className={styles.img_a1} src={require('../../public/slide-2.jpg')} ></Image>
                   <div className={styles.mc1_a1_2}>
-                    <h3 style={{fontSize:'2.25rem'}}>
+                    <h3 style={{ fontSize: '2.25rem' }}>
                       Our strength
                     </h3>
                     <p>
@@ -177,7 +204,7 @@ export default function Home() {
                 <div className={styles.mc1_a1_1}>
                   <Image className={styles.img_a1} src={require('../../public/slide-3.jpeg')} ></Image>
                   <div className={styles.mc1_a1_2}>
-                    <h3 style={{fontSize:'2.25rem'}}>
+                    <h3 style={{ fontSize: '2.25rem' }}>
                       Our team
                     </h3>
                     <p>

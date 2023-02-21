@@ -108,7 +108,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--gutter-y));
-  margin-right: calc(-.5 * var(--gutter-x));
+  /* margin-right: calc(-.5 * var(--gutter-x)); */
   margin-left: calc(-.5 * var(--gutter-x));
 }
 
@@ -194,7 +194,7 @@
   --gutter-y: 0;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--gutter-y));
-  margin-right: calc(-.5 * var(--gutter-x));
+  /* margin-right: calc(-.5 * var(--gutter-x)); */
   margin-left: calc(-.5 * var(--gutter-x));
 }
 
@@ -246,7 +246,7 @@
   color: #212529;
 }
 
-.ha{
+.ha {
   color: inherit;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -256,6 +256,92 @@
   font-size: 2.25rem;
 
 }
-.main_1{
+
+.main_1 {
   height: 65vh;
+}
+
+.th_sec {
+  padding-top: 72px !important;
+  position: relative;
+  padding-bottom: 72px !important;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.th_sec_m {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin: 0px !important;
+}
+
+.th_sec_mf {
+  display: grid !important;
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 0px;
+  column-gap: 0px;
+  --gutter-x: 0px;
+  --grid-item-padding-y: 10px;
+  --grid-item-padding-x: 10px;
+}
+
+.th_sec_mf1 {
+  grid-area: 1 / 1 / 7 / 7;
+  z-index: 1;
+}
+
+.mf1_h5 {
+  text-align: left;
+  font-size: 1.3125rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Dosis", "Odoo Unicode Support Noto", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.learn_more_btn {
+  color: #FFFFFF;
+  background-color: #5D679F;
+  border-color: #5D679F;
+  font-family: "Dosis", "Odoo Unicode Support Noto", sans-serif;
+  margin-bottom: 0.5rem !important;
+
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  
+  
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.th_sec_mf2 {
+  z-index: 2;
+  grid-area: 1 / 7 / 7 / 12;
+}
+
+.img_mx {
+  min-height: 1px;
+  display: block;
+  display: inline-block;
+
+  margin-right: auto !important;
+  margin-left: auto !important;
+
+  max-width: 100%;
+  height: auto;
 }

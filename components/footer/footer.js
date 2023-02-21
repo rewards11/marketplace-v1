@@ -146,14 +146,14 @@ function Footer() {
 
 
           <div style={{ paddingTop: '1rem', paddingBottom: '1rem', paddingLeft: '0.6rem', paddingRight: '0.6rem', marginLeft: '6rem', marginRight: '6rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between',width:'100%' }}>
               <div>
                 <span>
                   Copyright © Rewards11
                 </span>
               </div>
-              <div>
-                <div style={{ display: 'flex' }}>
+              <div style={{ display: 'flex',justifyContent:'space-between',width:'35%' }}>
+                <div style={{ display: 'flex',justifyContent:'space-between',width:'100%' }}>
                   <span>  Powered by   </span>
                   <Link className={styles.oddoo_foot} href='https://www.odoo.com/'>
                     <Image  src={require('../../public/odoo_logo_tiny.png')} />
