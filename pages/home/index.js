@@ -10,6 +10,7 @@ import Link from 'next/link';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Carousel } from 'react-responsive-carousel';
+
 export default function Home() {
   const images = [
     require('../../public/ca1.png'),
@@ -19,6 +20,8 @@ export default function Home() {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
+    const hostUrl = process.env.NEXT_PUBLIC_HOST_URL
+    console.log('Host URL:', hostUrl)
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % images.length);
     }, 5000);

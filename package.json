@@ -1,10 +1,10 @@
 {
   "name": "sample-marketplace",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "prettier": "prettier --write .",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint"
   },
   "dependencies": {
