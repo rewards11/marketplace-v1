@@ -20,8 +20,6 @@ export default function Home() {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
-    const hostUrl = process.env.NEXT_PUBLIC_HOST_URL
-    console.log('Host URL:', hostUrl)
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % images.length);
     }, 5000);
