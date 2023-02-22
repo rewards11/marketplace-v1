@@ -106,7 +106,7 @@
   --gutter-x: 30px;
   --gutter-y: 0;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: calc(-1 * var(--gutter-y));
   /* margin-right: calc(-.5 * var(--gutter-x)); */
   margin-left: calc(-.5 * var(--gutter-x));
@@ -259,6 +259,7 @@
 
 .main_1 {
   height: 65vh;
+  margin-top: 6rem;
 }
 
 .th_sec {
@@ -321,8 +322,8 @@
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  
-  
+
+
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;

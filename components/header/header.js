@@ -31,12 +31,12 @@ function Header() {
       <nav>
         <div className={styles.header}>
           <div className={styles.container_h}>
-            <Link href="/" className={`${styles.navbar_brand}, ${styles.logo}, ${styles.me_lg_auto}, ${styles.me_0}`}>
-              <Image className={styles.img_logo} src={require('../../public/rewards11logo.png')} width={120} height={200}></Image>
+            <Link href="/market" className={`${styles.navbar_brand}, ${styles.logo}, ${styles.me_lg_auto}, ${styles.me_0}`}>
+              <Image className={styles.img_logo} src={require('../../public/rewards11homelogo.png')} width={120} height={200}></Image>
             </Link>
             <ul className={styles.under_li}>
               <li>
-                <Link href="/">
+                <Link href="/web/login">
                   Sign In
                 </Link>
               </li>
@@ -131,25 +131,25 @@ function Header() {
 
                         <li className={styles.pop_li}><Link href="/blog" >Blog</Link></li>
 
-                        <li className={styles.pop_li}><Link href="/event" >Events</Link></li>
+                        {/* <li className={styles.pop_li}><Link href="/event" >Events</Link></li> */}
 
-                        <li className={styles.pop_li}><Link href="/shop" >Shop</Link></li>
+                        {/* <li className={styles.pop_li}><Link href="/shop" >Shop</Link></li> */}
 
-                        <li className={styles.pop_li}><Link href="/our-services"  />Services</li>
+                        <li className={styles.pop_li}><Link href="/our-services">Services</Link></li>
 
-                        <li className={styles.pop_li}><Link href="/news-2"  />News</li>
+                        <li className={styles.pop_li}><Link href="/blog/news-2">News</Link></li>
 
-                        <li className={styles.pop_li}><Link href="/success-stories-3"  />Success Stories</li>
+                        <li className={styles.pop_li}><Link href="/blog/success-stories-3">Success Stories</Link></li>
 
-                        <li className={styles.pop_li}><Link href="/about-us"  />About Us</li>
+                        <li className={styles.pop_li}><Link href='/about-us'>About Us</Link></li>
 
-                        <li className={styles.pop_li}><Link href="/learn-more"  />Learn More</li>
+                        {/* <li className={styles.pop_li}><Link href="/learn-more"  />Learn More</li> */}
 
                         <li className={styles.pop_li}><Link href="/career"  >Careers</Link></li>
 
-                        <li className={styles.pop_li}><Link href="/cart"  ></Link>My Cart</li>
+                        {/* <li className={styles.pop_li}><Link href="/cart"  ></Link>My Cart</li> */}
 
-                        <li className={styles.pop_li}><Link  href="/"><Image src={require('../../public/rewards11toggle.png')}></Image></Link></li>
+                        <li className={styles.pop_li}><Link href="/market"><Image src={require('../../public/rewards11toggle.png')}></Image></Link></li>
 
                       </ul>
                     </div>

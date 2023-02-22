@@ -1,8 +1,8 @@
 // next.config.js
 const nextConfig = {
-  experimental: {
-    transpilePackages: ['@reservoir0x/reservoir-kit-ui'],
-  },
+  // experimental: {
+  //   transpilePackages: ['@reservoir0x/reservoir-kit-ui'],
+  // },
   async redirects() {
     return [
       {

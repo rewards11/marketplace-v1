@@ -138,9 +138,9 @@ export default function Home() {
                   <br />
 
                 </h4>
-                <p style={{ marginBottom: '1rem' }}>
+                {/* <p style={{ marginBottom: '1rem' }}>
                   <Link className={styles.learn_more_btn} href='/learn-more'>Learn More</Link>
-                </p>
+                </p> */}
 
               </div>
 
@@ -229,7 +229,7 @@ export default function Home() {
             <div className={styles.bottm2}>
               <div className={styles.bottm3}>
                 <h3 className={styles.had} >
-                  <b style={{ fontWeight: 'bold', fontSize: '2.25rem', }}>Niche product- enjoy the benefits of being first!</b>
+                  <b style={{whiteSpace:'nowrap', fontWeight: 'bold', fontSize: '2.25rem', }}>Niche product- enjoy the benefits of being first!</b>
                   <br />
                 </h3>
                 <p style={{ marginBottom: '1rem', textAlign: 'right', marginBottom: '1rem' }}>

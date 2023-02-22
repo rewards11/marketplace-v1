@@ -1,20 +1,20 @@
 import React from 'react'
-import Header from '../../components/header/header';
-import Footer from '../../components/footer/footer';
-import styles from '../../styles/Home.module.css';
+import Header from '../../../components/header/header';
+import Footer from '../../../components/footer/footer';
+import styles from '../../../styles/Home.module.css';
 import Head from 'next/head';
-const learnmore = () => {
+const login = () => {
   return (
     <div className={styles.container}>
     <Head>
-      <title>learnmore</title>
+      <title>login</title>
       <link rel="icon" href="/rewards11favconic.ico" />
     </Head>
 
     <Header />
 
     <main className={styles.main_1}>
-    learnmore
+    login
     </main >
 
     <Footer />
@@ -22,4 +22,4 @@ const learnmore = () => {
   )
 }
 
-export default learnmore
+export default login

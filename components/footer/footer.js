@@ -112,12 +112,12 @@ function Footer() {
                       About us
                     </Link>
                   </li>
-                  <span> . </span>
-                  <li style={{ marginRight: '0.5rem', marginLeft: '0.5rem' }}>
+                  {/* <span> . </span> */}
+                  {/* <li style={{ marginRight: '0.5rem', marginLeft: '0.5rem' }}>
                     <Link href='/products'>
                       Products
                     </Link>
-                  </li>
+                  </li> */}
                   <span> . </span>
                   <li style={{ marginRight: '0.5rem', marginLeft: '0.5rem' }}>
                     <Link href='/terms'>
