@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/50c14076-6300-4856-ac05-0cde51cfe888/resourceGroups/rewards11_group/providers/Microsoft.Web/sites/rewards11n",
+    "appService.deploySubpath": ".next"
+}
