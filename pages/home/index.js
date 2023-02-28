@@ -10,7 +10,6 @@ import Link from 'next/link';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Carousel } from 'react-responsive-carousel';
-
 export default function Home() {
   const images = [
     require('../../public/ca1.png'),
@@ -109,7 +108,6 @@ export default function Home() {
                   <Image className={styles.img_car} src={require('../../public/ca3.jpg')} ></Image>
                 </div> */}
 
-
         <div className={styles.carouselContainer}>
           <h2>Current slide: {currentSlide}</h2>
           <Slider {...settings}>
@@ -152,7 +150,6 @@ export default function Home() {
           </div>
         </div>
 
-
         <div style={{ paddingTop: 12, backgroundColor: '#5D679F' }}>
           <div className={styles.sp}>
             <p style={{ marginBottom: '1rem' }}></p>
@@ -161,7 +158,6 @@ export default function Home() {
 
         <div className={styles.mc}>
           <div className={styles.mc1}>
-
 
             <div className={styles.mc1_a}>
 
@@ -180,8 +176,6 @@ export default function Home() {
 
               </div>
 
-
-
               <div className={styles.mc1_a1}>
                 <div className={styles.mc1_a1_1}>
                   <Image className={styles.img_a1} src={require('../../public/slide-2.jpg')} ></Image>
@@ -196,8 +190,6 @@ export default function Home() {
                 </div>
 
               </div>
-
-
 
               <div className={styles.mc1_a1}>
                 <div className={styles.mc1_a1_1}>
@@ -216,9 +208,6 @@ export default function Home() {
 
             </div>
 
-
-
-
           </div>
         </div>
 
@@ -229,7 +218,7 @@ export default function Home() {
             <div className={styles.bottm2}>
               <div className={styles.bottm3}>
                 <h3 className={styles.had} >
-                  <b style={{whiteSpace:'nowrap', fontWeight: 'bold', fontSize: '2.25rem', }}>Niche product- enjoy the benefits of being first!</b>
+                  <b style={{ whiteSpace: 'nowrap', fontWeight: 'bold', fontSize: '2.25rem', }}>Niche product- enjoy the benefits of being first!</b>
                   <br />
                 </h3>
                 <p style={{ marginBottom: '1rem', textAlign: 'right', marginBottom: '1rem' }}>

@@ -10,7 +10,7 @@ import CartMenu from './CartMenu'
 import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
 import useMounted from 'hooks/useMounted'
-
+import Link from 'next/link';
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
 const EXTERNAL_LINKS = process.env.NEXT_PUBLIC_EXTERNAL_LINKS || null
@@ -100,17 +100,17 @@ const Navbar: FC = () => {
           setHasCommunityDropdown(false)
           !showDesktopSearch
             ? setFilterComponent(
-                <SearchMenu
-                  communityId={COMMUNITY}
-                  initialResults={initialResults}
-                />
-              )
+              <SearchMenu
+                communityId={COMMUNITY}
+                initialResults={initialResults}
+              />
+            )
             : setFilterComponent(
-                <SearchCollections
-                  communityId={COMMUNITY}
-                  initialResults={initialResults}
-                />
-              )
+              <SearchCollections
+                communityId={COMMUNITY}
+                initialResults={initialResults}
+              />
+            )
         }
       })
     }
@@ -123,6 +123,12 @@ const Navbar: FC = () => {
   return (
     <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-white px-6 py-4 dark:border-neutral-600 dark:bg-black md:gap-3 md:py-6 md:px-16">
       <NavbarLogo className="z-10 max-w-[300px]" />
+
+      <div className="z-10 ml-12 mr-12 hidden items-center gap-11 md:flex">
+        <button style={{marginLeft:5}}>
+          <Link className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white" href="https://rewards11.com/" >Home</Link>
+        </button>
+      </div>
       {showLinks && (
         <div className="z-10 ml-12 mr-12 hidden items-center gap-11 md:flex">
           {externalLinks.map(({ name, url }) => (
