@@ -66,7 +66,7 @@ const ConnectWallet: FC = () => {
               {account.address && <Balance address={account.address} />}
             </span>
           </div>
-          <Link href={`/address/${account.address}`} legacyBehavior={true}>
+          <Link href={`/address/${account.address}`} legacyBehavior={true} passHref >
             <DropdownMenu.Item asChild>
               <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
                 Portfolio
@@ -100,6 +100,7 @@ const ConnectWallet: FC = () => {
                       ? `/reservoir_watermark_dark.svg`
                       : `/reservoir_watermark_light.svg`
                   }
+                  alt=""
                 />
               </a>
             </Link>

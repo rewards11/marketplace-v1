@@ -14,8 +14,9 @@ type Props = {
 }
 
 const NavbarLogo: FC<Props> = ({ variant, className }) => {
-  // const logo = NAVBAR_LOGO || '/reservoir.svg'
-  const desktopLogo = DESKTOP_NAVBAR_LOGO || '/rewards11logo.png'
+  const logo = NAVBAR_LOGO || '/rewards11nlogo.png'
+  // const desktopLogo = DESKTOP_NAVBAR_LOGO || '/reservoir-desktop.svg'
+  const desktopLogo = DESKTOP_NAVBAR_LOGO || '/rewards11nlogo.png'
   const chain = useEnvChain()
   let logoAlt = 'Logo'
 
@@ -34,7 +35,7 @@ const NavbarLogo: FC<Props> = ({ variant, className }) => {
         className={`relative inline-flex flex-none items-center gap-1 ${className}`}
       >
         <img
-          // src={logo}
+          src={logo}
           alt={logoAlt}
           className={`h-9 w-auto ${!variant ? 'md:hidden' : ''} ${
             desktopVariant ? 'hidden' : ''

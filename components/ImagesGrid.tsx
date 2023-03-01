@@ -23,6 +23,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
               className="col-span-2 w-full rounded object-cover"
               width="224"
               height="224"
+              alt=''
             />
           ) : (
             // BIG IMAGE, NO SIDE IMAGES
@@ -31,6 +32,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
               className="col-span-2 w-full rounded object-contain"
               width="300"
               height="300"
+              alt=''
             />
           )}
           {sample_images.length > 1 && (
@@ -42,6 +44,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
                   width="70"
                   height="70"
                   className="w-[70px] rounded"
+                  alt=''
                 />
               ))}
             </div>
@@ -49,7 +52,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
         </div>
       ) : (
         <div className="aspect-w-1 aspect-h-1 relative">
-          <img src="https://via.placeholder.com/250" width="250" height="250" />
+          <img src="https://via.placeholder.com/250" width="250" height="250" alt='' />
         </div>
       )}
     </>

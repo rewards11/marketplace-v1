@@ -110,6 +110,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                       <img
                         src={optimizeImage(image, 140)}
                         className="h-[56px] w-[56px] rounded-full object-cover"
+                        alt=''
                       />
                       <div
                         className={`reservoir-h6 overflow-hidden truncate whitespace-nowrap dark:text-white ${

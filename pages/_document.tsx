@@ -31,10 +31,8 @@ const MyDocument = function () {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="keywords" content="nft, ethereum, protocol" />
-      {/* <link rel="shortcut icon" type="image/svg" href={FAVICON} /> */}
-      <link rel="icon" href="/rewards11favconic.ico" />
+      <link rel="shortcut icon" type="" href="/rewards11favconic.ico" />
       <title>Rewards11</title>
-      {/* <title>{META_TITLE}</title> */}
       <meta name="description" content={META_DESCRIPTION} />
       <meta name="keywords" content="NFT, API, Protocol" />
       {/* Twitter */}
