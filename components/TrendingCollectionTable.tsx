@@ -177,7 +177,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
         <CgSpinner className="mx-auto h-6 w-6 animate-spin" />
       )}
 
-      {FOOTER_ENABLED && !expanded && (
+      {FOOTER_ENABLED==true && expanded==false ?
         <button
           className="btn-primary-outline mx-auto my-3 border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
           onClick={() => {
@@ -186,7 +186,9 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
         >
           Load More
         </button>
-      )}
+        :
+        null
+      }
     </div>
   )
 }
