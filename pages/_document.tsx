@@ -31,9 +31,9 @@ const MyDocument = function () {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="keywords" content="nft, ethereum, protocol" />
-      <link rel="shortcut icon" type="" href="/rewards11favconic.ico" />
-      <title>Rewards11</title>
-      <meta name="description" content="Rewards11" />
+      <link rel="shortcut icon" type="image/svg" href={FAVICON} />
+      <title>{META_TITLE}</title>
+      <meta name="description" content={META_DESCRIPTION} />
       <meta name="keywords" content="NFT, API, Protocol" />
       {/* Twitter */}
       {/* The optimal size is 1200 x 630 (1.91:1 ratio). */}
@@ -42,20 +42,20 @@ const MyDocument = function () {
       <meta name="twitter:site:domain" content={META_URL} />
       <meta name="twitter:url" content={META_URL} />
       {/* should be between 30-60 characters, with a maximum of 70 */}
-      <meta name="twitter:title" content="Rewards11" />
+      <meta name="twitter:title" content={META_TITLE} />
       {/* should be between 55 and 200 characters long */}
-      <meta name="twitter:description" content="Rewards11" />
+      <meta name="twitter:description" content={META_DESCRIPTION} />
       <meta name="twitter:site" content={META_TWITTER_USERNAME} />
 
       {/* OG - https://ogp.me/ */}
       {/* https://www.opengraph.xyz/ */}
       {/* should be between 30-60 characters, with a maximum of 90 */}
-      <meta name="og:title" content="Rewards11" />
+      <meta name="og:title" content={META_TITLE} />
       <meta property="og:type" content="website" />
       <meta property="og:determiner" content="the" />
       <meta property="og:locale" content="en" />
       {/* Make sure the important part of your description is within the first 110 characters, so it doesn't get cut off on mobile. */}
-      <meta property="og:description" content="Rewards11" />
+      <meta property="og:description" content={META_DESCRIPTION} />
       <meta property="og:site_name" content={SOURCE_ID} />
       <meta property="og:url" content={META_URL} />
       {/* The optimal size is 1200 x 630 (1.91:1 ratio). */}

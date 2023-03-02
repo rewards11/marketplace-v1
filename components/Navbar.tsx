@@ -10,7 +10,6 @@ import CartMenu from './CartMenu'
 import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
 import useMounted from 'hooks/useMounted'
-import Link from 'next/link'
 
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
@@ -65,7 +64,6 @@ const Navbar: FC = () => {
 
   useEffect(() => {
     setShowLinks(externalLinks.length > 0)
-    console.log("externalLinks.length > 0", externalLinks.length)
   }, [])
 
   useEffect(() => {
@@ -125,8 +123,15 @@ const Navbar: FC = () => {
   return (
     <nav className="sticky top-0 z-[1000] col-span-full flex items-center justify-between gap-2 border-b border-[#D4D4D4] bg-white px-6 py-4 dark:border-neutral-600 dark:bg-black md:gap-3 md:py-6 md:px-16">
       <NavbarLogo className="z-10 max-w-[300px]" />
-      {/* {showLinks && ( */}
-      {/* <div className="z-10 ml-12 mr-12 hidden items-center gap-11 md:flex">
+      {/* <div className="z-10 ml-48 mr-8 items-center gap-11 md:flex">
+         <Link href="https://rewards11.com" legacyBehavior={true} className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white">
+           <a className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white" target="_blank" rel="noreferrer">
+             Home
+           </a>
+         </Link>
+      </div> */}
+      {showLinks && (
+        <div className="z-10 ml-12 mr-12 hidden items-center gap-11 md:flex">
           {externalLinks.map(({ name, url }) => (
             <a
               key={url}
@@ -136,29 +141,8 @@ const Navbar: FC = () => {
               {name}
             </a>
           ))}
-        </div> */}
-      {/* )} */}
-
-      <div className="z-10 ml-48 mr-8 items-center gap-11 md:flex">
-        <Link href="https://rewards11.com" legacyBehavior={true} className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white">
-          <a className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white" target="_blank" rel="noreferrer">
-            Home
-          </a>
-        </Link>
-      </div>
-
-      <div className="z-10 ml-8 mr-8 items-center gap-11 md:flex">
-        <Link href="/" className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white" legacyBehavior={true}>
-        <a className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white" target="_parent" rel="noreferrer" onClick={()=>location.reload()}>
-        Discover
-          </a>
-          </Link>
-      </div>
-
-      <div className="z-10 ml-8 mr-8 items-center gap-11 md:flex">
-        <Link href="/sell" className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white">Sell</Link>
-      </div>
-
+        </div>
+      )}
       {(hasCommunityDropdown || showDesktopSearch) && (
         <div className="flex h-full w-full items-center">
           {filterComponent && filterComponent}
