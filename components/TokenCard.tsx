@@ -22,7 +22,7 @@ import { useMediaQuery } from '@react-hookz/web'
 import RarityTooltip from './RarityTooltip'
 import { Collection } from 'types/reservoir'
 import { getPricing } from 'lib/token/pricing'
-
+import Router from 'next/router'
 const SOURCE_ICON = process.env.NEXT_PUBLIC_SOURCE_ICON
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 const API_BASE =
@@ -74,6 +74,16 @@ const TokenCard: FC<Props> = ({
   if (!CHAIN_ID) return null
   const isInTheWrongNetwork = Boolean(signer && activeChain?.id !== +CHAIN_ID)
   const tokenId = `${token?.token?.contract}:${token?.token?.tokenId}`
+  console.log("tokenId", tokenId)
+  const checkLinkRout = () => {
+    console.log("{token?.token?.contract}", tokenId)
+    console.log("{token?.token?.tokenId}", tokenId)
+    console.log("/${token?.token?.contract}/${token?.token?.tokenId}", `/${token?.token?.contract}/${token?.token?.tokenId}`)
+    console.log("/${token?.token?.contract}/${token?.token?.tokenId}", `/${token?.token?.contract}/${token?.token?.tokenId}`)
+    Router.push(`/${token?.token?.contract}/${token?.token?.tokenId}`)
+  }
+
+
 
   const isInCart = Boolean(tokensMap[tokenId])
   const isOwner =
@@ -98,11 +108,15 @@ const TokenCard: FC<Props> = ({
         </div>
       ) : null}
 
-      <Link
-        key={`${token?.token?.contract}:${token?.token?.tokenId}`}
-        href={`/${token?.token?.contract}/${token?.token?.tokenId}`}
-        legacyBehavior={true}
-      >
+
+
+
+      <div className="cursor-pointer"  onClick={checkLinkRout}>
+        {/* <Link
+          key={`${token?.token?.contract}:${token?.token?.tokenId}`}
+          href={`/${token?.token?.contract}/${token?.token?.tokenId}`}
+          legacyBehavior={true}
+        > */}
         <a className="mb-[85px]">
           {token?.token?.image ? (
             <Image
@@ -141,11 +155,17 @@ const TokenCard: FC<Props> = ({
             </div>
           )}
         </a>
-      </Link>
+        {/* </Link> */}
+      </div>
+
+
+
+
+
+
       <div
-        className={`absolute bottom-[0px] w-full bg-white transition-all  dark:bg-neutral-800 md:-bottom-[41px] ${
-          !isOwner && !price ? '' : 'group-hover:bottom-[0px]'
-        }`}
+        className={`absolute bottom-[0px] w-full bg-white transition-all  dark:bg-neutral-800 md:-bottom-[41px] ${!isOwner && !price ? '' : 'group-hover:bottom-[0px]'
+          }`}
       >
         <div className="flex items-center justify-between">
           <div
@@ -168,7 +188,7 @@ const TokenCard: FC<Props> = ({
         </div>
         <div className="flex items-center justify-between px-4 pb-4 lg:pb-3">
           {price?.amount?.decimal != null &&
-          price?.amount?.decimal != undefined ? (
+            price?.amount?.decimal != undefined ? (
             <>
               <div className="reservoir-h6">
                 <FormatCrypto
@@ -184,9 +204,9 @@ const TokenCard: FC<Props> = ({
                     className="h-6 w-6"
                     src={
                       reservoirClient?.source &&
-                      reservoirClient.source ===
+                        reservoirClient.source ===
                         token.market.floorAsk.source.domain &&
-                      SOURCE_ICON
+                        SOURCE_ICON
                         ? SOURCE_ICON
                         : `${API_BASE}/redirect/sources/${token?.market.floorAsk.source.domain}/logo/v2`
                     }
@@ -239,9 +259,8 @@ const TokenCard: FC<Props> = ({
           price?.amount?.decimal != undefined &&
           !isOwner && (
             <div
-              className={`grid ${
-                isInCart || canAddToCart ? 'grid-cols-2' : ''
-              }`}
+              className={`grid ${isInCart || canAddToCart ? 'grid-cols-2' : ''
+                }`}
             >
               <BuyNow
                 data={{
@@ -259,7 +278,7 @@ const TokenCard: FC<Props> = ({
                     const index = newCartTokens.findIndex(
                       (newCartToken) =>
                         newCartToken.token.contract ===
-                          token?.token?.contract &&
+                        token?.token?.contract &&
                         newCartToken.token.tokenId === token?.token?.tokenId
                     )
                     newCartTokens.splice(index, 1)

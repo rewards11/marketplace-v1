@@ -93,11 +93,12 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                 ref={
                   index === arr.length - 5 && shouldInfiniteLoad ? ref : null
                 }
-                className={`${index === arr.length - 1 ||
-                    (FOOTER_ENABLED && !expanded && index == 9)
+                className={`${
+                  index === arr.length - 1 ||
+                  (FOOTER_ENABLED && !expanded && index == 9)
                     ? ''
                     : 'border-b'
-                  } group h-[88px] border-neutral-300 dark:border-neutral-600 dark:text-white`}
+                } group h-[88px] border-neutral-300 dark:border-neutral-600 dark:text-white`}
               >
                 {/* COLLECTION */}
                 <td className="reservoir-body flex items-center gap-4 whitespace-nowrap px-6 py-4 dark:text-white">
@@ -109,11 +110,11 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                       <img
                         src={optimizeImage(image, 140)}
                         className="h-[56px] w-[56px] rounded-full object-cover"
-                        alt=''
                       />
                       <div
-                        className={`reservoir-h6 overflow-hidden truncate whitespace-nowrap dark:text-white ${isSmallDevice ? 'max-w-[140px]' : ''
-                          }`}
+                        className={`reservoir-h6 overflow-hidden truncate whitespace-nowrap dark:text-white ${
+                          isSmallDevice ? 'max-w-[140px]' : ''
+                        }`}
                       >
                         {name}
                       </div>
@@ -129,8 +130,8 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                         sort === '7DayVolume'
                           ? days7
                           : sort === '30DayVolume'
-                            ? days30
-                            : days1
+                          ? days30
+                          : days1
                       }
                     />
                     <PercentageChange
@@ -138,8 +139,8 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                         sort === '7DayVolume'
                           ? days7Change
                           : sort === '30DayVolume'
-                            ? days30Change
-                            : days1Change
+                          ? days30Change
+                          : days1Change
                       }
                     />
                   </td>
@@ -153,8 +154,8 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                       sort === '7DayVolume'
                         ? floorSaleChange7Days
                         : sort === '30DayVolume'
-                          ? floorSaleChange30Days
-                          : floorSaleChange1Days
+                        ? floorSaleChange30Days
+                        : floorSaleChange1Days
                     }
                   />
                 </td>
@@ -194,8 +195,8 @@ export default TrendingCollectionTable
 function processCollection(
   collection:
     | NonNullable<
-      NonNullable<Props['fallback']['collections']>['collections']
-    >[0]
+        NonNullable<Props['fallback']['collections']>['collections']
+      >[0]
     | undefined
 ) {
   const data = {

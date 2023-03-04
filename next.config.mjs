@@ -3,6 +3,7 @@
  */
 const nextConfig = {
   reactStrictMode: true,
+  trailingSlash: true,
   experimental: {
     transpilePackages: ['@reservoir0x/reservoir-kit-ui'],
   },
