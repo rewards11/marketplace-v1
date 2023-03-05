@@ -111,7 +111,7 @@ const TokenCard: FC<Props> = ({
 
 
 
-      <div className="cursor-pointer"  onClick={checkLinkRout}>
+      <div className="mb-[85px] cursor-pointer"  onClick={checkLinkRout}>
         {/* <Link
           key={`${token?.token?.contract}:${token?.token?.tokenId}`}
           href={`/${token?.token?.contract}/${token?.token?.tokenId}`}
