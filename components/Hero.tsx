@@ -228,7 +228,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                 </p>
               </div>
               {isLongDescription && (
-                <a
+                <span
                   className="mt-[-18px]"
                   onClick={(e) => {
                     e.preventDefault()
@@ -241,7 +241,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                     }`}
                     aria-hidden
                   />
-                </a>
+                </span>
               )}
             </>
           )}

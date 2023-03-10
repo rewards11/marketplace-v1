@@ -6,6 +6,7 @@ import { useAccount } from 'wagmi'
 import Toast from 'components/Toast'
 import toast from 'react-hot-toast'
 import { ComponentProps } from 'react'
+import Image from 'next/image'
 
 const Sell: NextPage = () => {
   const { address, isConnected } = useAccount()
@@ -34,11 +35,12 @@ const Sell: NextPage = () => {
             <h3 className="mb-2 text-2xl font-semibold dark:text-white sm:text-3xl">
               Sell your NFTs instantly
             </h3>
-            <img src="/sell_graphic.svg" alt="" className="dark:hidden" />
-            <img
+            <Image src="/sell_graphic.svg" alt="" className="dark:hidden" width={376} height={190} />
+            <Image
               src="/sell_graphic_dark.svg"
               alt=""
               className="hidden dark:block"
+              width={376} height={190}
             />
             <p className="max-w-[310px] dark:text-white">
               Connect wallet to accept the best offers from all major

@@ -106,7 +106,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                     {index + 1}
                   </div>
                   <Link href={tokenHref} legacyBehavior={true}>
-                    <a className="flex items-center gap-2">
+                    <span className="flex items-center gap-2">
                       <img
                         src={optimizeImage(image, 140)}
                         className="h-[56px] w-[56px] rounded-full object-cover"
@@ -118,7 +118,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                       >
                         {name}
                       </div>
-                    </a>
+                    </span>
                   </Link>
                 </td>
 

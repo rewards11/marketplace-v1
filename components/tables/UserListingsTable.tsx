@@ -209,7 +209,7 @@ const UserListingsTableRow = ({
       {/* ITEM */}
       <td className="whitespace-nowrap px-6 py-4 dark:text-white">
         <Link href={tokenHref} legacyBehavior={true}>
-          <a className="flex items-center gap-2">
+          <span className="flex items-center gap-2">
             <div className="relative h-16 w-16">
               {image && (
                 <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded">
@@ -231,7 +231,7 @@ const UserListingsTableRow = ({
                 {collectionName}
               </div>
             </span>
-          </a>
+          </span>
         </Link>
       </td>
 
@@ -257,7 +257,7 @@ const UserListingsTableRow = ({
 
       {/* MARKETPLACE */}
       <td className="whitespace-nowrap px-6 py-4">
-        <a
+        <Link
           href={source.link || '#'}
           target="_blank"
           rel="noreferrer"
@@ -269,7 +269,7 @@ const UserListingsTableRow = ({
           <span className="max-w-[200px] overflow-hidden text-ellipsis">
             {source.name}
           </span>
-        </a>
+        </Link>
       </td>
 
       <td className="sticky top-0 right-0 whitespace-nowrap dark:text-white">
@@ -335,7 +335,7 @@ const UserListingsMobileRow = ({
     >
       <div className="flex items-center justify-between">
         <Link href={tokenHref || '#'} legacyBehavior={true}>
-          <a className="flex items-center gap-2">
+          <span className="flex items-center gap-2">
             <div className="relative h-14 w-14">
               {image && (
                 <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded">
@@ -357,7 +357,7 @@ const UserListingsMobileRow = ({
                 {collectionName}
               </div>
             </div>
-          </a>
+          </span>
         </Link>
         <div className="flex flex-col">
           <FormatCrypto
@@ -375,7 +375,7 @@ const UserListingsMobileRow = ({
       </div>
       <div className="flex items-center justify-between pt-4">
         <div>
-          <a
+          <Link
             href={source.link || '#'}
             target="_blank"
             rel="noreferrer"
@@ -387,7 +387,7 @@ const UserListingsMobileRow = ({
             <span className="max-w-[150px] overflow-hidden text-ellipsis whitespace-nowrap text-xs">
               {source.name}
             </span>
-          </a>
+          </Link>
           <div className="text-xs font-light text-neutral-600 dark:text-neutral-300">{`Expires ${expiration}`}</div>
         </div>
         <CancelListing

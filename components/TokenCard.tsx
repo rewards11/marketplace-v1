@@ -117,7 +117,7 @@ const TokenCard: FC<Props> = ({
           href={`/${token?.token?.contract}/${token?.token?.tokenId}`}
           legacyBehavior={true}
         > */}
-        <a className="mb-[85px]">
+        <span className="mb-[85px]">
           {token?.token?.image ? (
             <Image
               loader={({ src }) => src}
@@ -154,7 +154,7 @@ const TokenCard: FC<Props> = ({
               />
             </div>
           )}
-        </a>
+        </span>
         {/* </Link> */}
       </div>
 

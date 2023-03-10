@@ -404,9 +404,8 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
                         href="https://reservoirprotocol.github.io/"
                         legacyBehavior={true}
                       >
-                        <a
+                        <span
                           className="reservoir-tiny flex gap-2 dark:text-white"
-                          target="_blank"
                         >
                           Powered by{' '}
                           <img
@@ -417,7 +416,7 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
                                 : `/reservoir_watermark_light.svg`
                             }
                           />
-                        </a>
+                        </span>
                       </Link>
                     </div>
                   )}

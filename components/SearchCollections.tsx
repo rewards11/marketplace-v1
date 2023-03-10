@@ -170,7 +170,7 @@ const SearchCollections: FC<Props> = ({
                       href={`/collections/${collection?.collectionId}`}
                       legacyBehavior={true}
                     >
-                      <a
+                      <span
                         {...getItemProps({
                           key: collection?.name,
                           index,
@@ -198,7 +198,7 @@ const SearchCollections: FC<Props> = ({
                         <span className="reservoir-subtitle ml-2 overflow-hidden text-ellipsis dark:text-white">
                           {collection?.name}
                         </span>
-                      </a>
+                      </span>
                     </Link>
                   ))}
               </div>
@@ -230,7 +230,7 @@ const SearchCollections: FC<Props> = ({
                   href={`/collections/${collection?.collectionId}`}
                   legacyBehavior={true}
                 >
-                  <a
+                  <span
                     {...getItemProps({
                       key: collection?.name,
                       index,
@@ -257,7 +257,7 @@ const SearchCollections: FC<Props> = ({
                     <span className="reservoir-subtitle ml-2 overflow-hidden text-ellipsis dark:text-white">
                       {collection?.name}
                     </span>
-                  </a>
+                  </span>
                 </Link>
               ))}
             </div>

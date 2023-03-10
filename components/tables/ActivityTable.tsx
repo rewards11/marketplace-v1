@@ -328,7 +328,7 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
           </div>
           <div className="flex items-center justify-between">
             <Link href={href} passHref legacyBehavior={true}>
-              <a className="flex items-center">
+              <span className="flex items-center">
                 <Image
                   className="rounded object-cover"
                   loader={({ src }) => src}
@@ -344,7 +344,7 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
                       activity.collection?.collectionName}
                   </div>
                 </div>
-              </a>
+              </span>
             </Link>
             {activity.price &&
             activity.price !== 0 &&
@@ -365,9 +365,9 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
                   href={`/address/${activity.fromAddress}`}
                   legacyBehavior={true}
                 >
-                  <a className="font-light text-primary-700 dark:text-primary-300">
+                  <span className="font-light text-primary-700 dark:text-primary-300">
                     {fromShortAddress}
-                  </a>
+                  </span>
                 </Link>
               ) : (
                 <span className="font-light">-</span>
@@ -381,9 +381,9 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
                   href={`/address/${activity.toAddress}`}
                   legacyBehavior={true}
                 >
-                  <a className="font-light text-primary-700 dark:text-primary-300">
+                  <span className="font-light text-primary-700 dark:text-primary-300">
                     {toShortAddress}
-                  </a>
+                  </span>
                 </Link>
               ) : (
                 <span className="font-light">-</span>
@@ -397,13 +397,12 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
                 href={`${blockExplorerBaseUrl}/tx/${activity.txHash}`}
                 legacyBehavior={true}
               >
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <span
+              
                   className="mb-4 flex items-center justify-between gap-2 font-light text-neutral-600 dark:text-neutral-300 md:justify-start"
                 >
                   <FiExternalLink className="h-4 w-4 text-primary-700 dark:text-primary-300" />
-                </a>
+                </span>
               </Link>
             )}
           </div>
@@ -436,7 +435,7 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
       </td>
       <td className="px-6 py-4">
         <Link href={href} passHref legacyBehavior={true}>
-          <a className="mr-2.5 flex items-center">
+          <span className="mr-2.5 flex items-center">
             <Image
               className="rounded object-cover"
               loader={({ src }) => src}
@@ -452,7 +451,7 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
                   activity.collection?.collectionName}
               </div>
             </div>
-          </a>
+          </span>
         </Link>
       </td>
       <td className="px-6 py-4">
@@ -467,9 +466,9 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
         {activity.fromAddress &&
         activity.fromAddress !== constants.AddressZero ? (
           <Link href={`/address/${activity.fromAddress}`} legacyBehavior={true}>
-            <a className="ml-2.5 mr-2.5 font-light text-primary-700 dark:text-primary-300">
+            <span className="ml-2.5 mr-2.5 font-light text-primary-700 dark:text-primary-300">
               {fromShortAddress}
-            </a>
+            </span>
           </Link>
         ) : (
           <span className="ml-2.5 mr-2.5 font-light">-</span>
@@ -478,9 +477,9 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
       <td className="px-6 py-4">
         {activity.toAddress && activity.toAddress !== constants.AddressZero ? (
           <Link href={`/address/${activity.toAddress}`} legacyBehavior={true}>
-            <a className="ml-2.5 mr-2.5 font-light text-primary-700 dark:text-primary-300">
+            <span className="ml-2.5 mr-2.5 font-light text-primary-700 dark:text-primary-300">
               {toShortAddress}
-            </a>
+            </span>
           </Link>
         ) : (
           <span className="ml-2.5 mr-2.5 font-light">-</span>
@@ -494,9 +493,9 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
               href={`${blockExplorerBaseUrl}/tx/${activity.txHash}`}
               legacyBehavior={true}
             >
-              <a target="_blank" rel="noopener noreferrer">
+              <span >
                 <FiExternalLink className="h-4 w-4 text-primary-700 dark:text-primary-300" />
-              </a>
+              </span>
             </Link>
           )}
         </div>

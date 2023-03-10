@@ -27,7 +27,7 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import useMounted from 'hooks/useMounted'
 import { useRouter } from 'next/router'
 import { getPricing } from 'lib/token/pricing'
-
+import Link from 'next/link'
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID
 const SOURCE_ID = process.env.NEXT_PUBLIC_SOURCE_ID
 const SOURCE_ICON = process.env.NEXT_PUBLIC_SOURCE_ICON
@@ -181,7 +181,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
             title="List Price"
             source={
               listSourceName && (
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   href={listSourceRedirect}
@@ -193,7 +193,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
                     src={listSourceLogo}
                     alt="Source Logo"
                   />
-                </a>
+                </Link>
               )
             }
             price={
@@ -211,7 +211,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
             title="Top Offer"
             source={
               offerSourceName && (
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   href={offerSourceRedirect}
@@ -223,7 +223,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
                     src={offerSourceLogo}
                     alt="Source Logo"
                   />
-                </a>
+                </Link>
               )
             }
             price={

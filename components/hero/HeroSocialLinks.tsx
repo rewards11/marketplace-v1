@@ -5,7 +5,7 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { Collection } from 'types/reservoir'
 import { useNetwork } from 'wagmi'
 import useEnvChain from 'hooks/useEnvChain'
-
+import Link from 'next/link'
 type Props = {
   refreshCollection: (collectionId: string | undefined) => Promise<void>
   collection?: Collection
@@ -49,7 +49,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
           >
             {typeof social.discordUrl === 'string' && (
               <DropdownMenu.Item asChild>
-                <a
+                <Link
                   className={dropdownItemClasses}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -61,12 +61,12 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                     className="h-6 w-6"
                   />
                   Discord
-                </a>
+                </Link>
               </DropdownMenu.Item>
             )}
             {typeof social.twitterUsername === 'string' && (
               <DropdownMenu.Item asChild>
-                <a
+                <Link
                   className={dropdownItemClasses}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -78,11 +78,11 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                     className="h-6 w-6"
                   />
                   Twitter
-                </a>
+                </Link>
               </DropdownMenu.Item>
             )}
             <DropdownMenu.Item asChild>
-              <a
+              <Link
                 className={dropdownItemClasses}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -94,11 +94,11 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                   className="h-6 w-6"
                 />
                 {envChain?.blockExplorers?.default.name || 'Etherscan'}
-              </a>
+              </Link>
             </DropdownMenu.Item>
             {typeof social.externalUrl === 'string' && (
               <DropdownMenu.Item asChild>
-                <a
+                <Link
                   className={dropdownItemClasses}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -106,7 +106,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                 >
                   <FiGlobe className="h-6 w-6" />
                   Website
-                </a>
+                </Link>
               </DropdownMenu.Item>
             )}
             {collection?.id && (
@@ -128,7 +128,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
     return (
       <div className="flex gap-4">
         {typeof social.discordUrl === 'string' && (
-          <a
+          <Link
             className="flex-none"
             target="_blank"
             rel="noopener noreferrer"
@@ -139,10 +139,10 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
               alt="Discord Icon"
               className="h-6 w-6"
             />
-          </a>
+          </Link>
         )}
         {typeof social.twitterUsername === 'string' && (
-          <a
+          <Link
             className="flex-none"
             target="_blank"
             rel="noopener noreferrer"
@@ -153,25 +153,25 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
               alt="Twitter Icon"
               className="h-6 w-6"
             />
-          </a>
+          </Link>
         )}
-        <a
+        <Link
           className="flex-none text-black dark:text-white"
           target="_blank"
           rel="noopener noreferrer"
           href={social.blockExplorerUrl}
         >
           <img src={etherscanLogo} alt="Etherscan Icon" className="h-6 w-6" />
-        </a>
+        </Link>
         {typeof social.externalUrl === 'string' && (
-          <a
+          <Link
             className="flex-none text-black dark:text-white"
             target="_blank"
             rel="noopener noreferrer"
             href={social.externalUrl}
           >
             <FiGlobe className="h-6 w-6" />
-          </a>
+          </Link>
         )}
       </div>
     )

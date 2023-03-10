@@ -5,6 +5,7 @@ import ImagesGrid from './ImagesGrid'
 import usePaginatedCollections from 'hooks/usePaginatedCollections'
 import LoadingCardCollection from './LoadingCardCollection'
 import Masonry from 'react-masonry-css'
+import Image from 'next/image'
 
 type Props = {
   collections: ReturnType<typeof usePaginatedCollections>
@@ -61,14 +62,14 @@ const CollectionsGrid: FC<Props> = ({ collections }) => {
                 href={`/collections/${collection?.id}`}
                 legacyBehavior={true}
               >
-                <a className="group mb-6 block transform-gpu overflow-hidden rounded-[16px] border border-[#D4D4D4] bg-white p-3 transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-0 dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600">
+                <span className="group mb-6 block transform-gpu overflow-hidden rounded-[16px] border border-[#D4D4D4] bg-white p-3 transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-0 dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600">
                   <ImagesGrid
                     sample_images={collection?.sampleImages}
                     value={collection?.name || ''}
                   />
                   <div className="mt-3 flex items-center gap-2">
                     {collection?.image ? (
-                      <img
+                      <Image
                         src={optimizeImage(collection?.image, 80)}
                         className="h-12 w-12 rounded-full"
                         alt="Collection Image"
@@ -81,7 +82,7 @@ const CollectionsGrid: FC<Props> = ({ collections }) => {
                       {collection?.name}
                     </div>
                   </div>
-                </a>
+                </span>
               </Link>
             ))}
       {!didReachEnd &&

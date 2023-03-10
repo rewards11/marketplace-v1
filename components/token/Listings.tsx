@@ -70,7 +70,7 @@ const Listings: FC<Props> = ({ token }) => {
                     <td className="reservoir-body whitespace-nowrap px-6 py-4">
                       {from.address && (
                         <div className="flex items-center gap-2">
-                          <a
+                          <Link
                             className="h-4 w-4"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -79,11 +79,11 @@ const Listings: FC<Props> = ({ token }) => {
                           >
                             {/* @ts-ignore */}
                             <img src={source?.logo} alt="" />
-                          </a>
+                          </Link>
                           <Link href={from.href} legacyBehavior={true}>
-                            <a className="reservoir-subtitle text-primary-700 dark:text-primary-100">
+                            <span className="reservoir-subtitle text-primary-700 dark:text-primary-100">
                               {truncateAddress(from.address)}
-                            </a>
+                            </span>
                           </Link>
                         </div>
                       )}

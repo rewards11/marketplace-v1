@@ -10,7 +10,7 @@ import CartMenu from './CartMenu'
 import SearchMenu from './SearchMenu'
 import { useMediaQuery } from '@react-hookz/web'
 import useMounted from 'hooks/useMounted'
-
+import Link from 'next/link'
 const SearchCollections = dynamic(() => import('./SearchCollections'))
 const CommunityDropdown = dynamic(() => import('./CommunityDropdown'))
 const EXTERNAL_LINKS = process.env.NEXT_PUBLIC_EXTERNAL_LINKS || null
@@ -125,21 +125,21 @@ const Navbar: FC = () => {
       <NavbarLogo className="z-10 max-w-[300px]" />
       {/* <div className="z-10 ml-48 mr-8 items-center gap-11 md:flex">
          <Link href="https://rewards11.com/" legacyBehavior={true} className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white">
-           <a className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white" target="_blank" rel="noreferrer">
+           <span className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white" target="_blank" rel="noreferrer">
              Home
-           </a>
+           </span>
          </Link>
       </div> */}
       {showLinks && (
         <div className="z-10 ml-12 mr-12 hidden items-center gap-11 md:flex">
           {externalLinks.map(({ name, url }) => (
-            <a
+            <Link
               key={url}
               href={url}
               className="text-dark reservoir-h6 hover:text-[#1F2937] dark:text-white"
             >
               {name}
-            </a>
+            </Link>
           ))}
         </div>
       )}

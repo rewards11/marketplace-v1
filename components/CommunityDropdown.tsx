@@ -53,7 +53,7 @@ const CommunityDropdown: FC<Props> = ({ collections, defaultCollectionId }) => {
                   href={`/collections/${collection.collectionId}`}
                   legacyBehavior={true}
                 >
-                  <a
+                  <span
                     onClick={() => {
                       setOpen(false)
                     }}
@@ -67,7 +67,7 @@ const CommunityDropdown: FC<Props> = ({ collections, defaultCollectionId }) => {
                     <p className="reservoir-h6 truncate dark:text-white">
                       {collection.name}
                     </p>
-                  </a>
+                  </span>
                 </Link>
               </DropdownMenu.Item>
             )

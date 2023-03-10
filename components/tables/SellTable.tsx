@@ -133,7 +133,7 @@ const SellTable: FC<Props> = ({ modal, isOwner, address }) => {
             >
               <div className="flex items-center justify-between">
                 <Link href={href || '#'} legacyBehavior={true}>
-                  <a className="flex items-center gap-2">
+                  <span className="flex items-center gap-2">
                     <div className="relative h-14 w-14">
                       {image && (
                         <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded">
@@ -157,7 +157,7 @@ const SellTable: FC<Props> = ({ modal, isOwner, address }) => {
                         </div>
                       )}
                     </div>
-                  </a>
+                  </span>
                 </Link>
                 <div className="flex flex-col justify-end">
                   <div className="flex items-center justify-end">
@@ -301,7 +301,7 @@ const SellTable: FC<Props> = ({ modal, isOwner, address }) => {
                 {/* ITEM */}
                 <td className="whitespace-nowrap py-4 pr-6">
                   <Link href={href || '#'} legacyBehavior={true}>
-                    <a className="flex items-center gap-2">
+                    <span className="flex items-center gap-2">
                       <div className="relative h-16 w-16">
                         {image && (
                           <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded">
@@ -323,7 +323,7 @@ const SellTable: FC<Props> = ({ modal, isOwner, address }) => {
                           {collectionName}
                         </div>
                       </span>
-                    </a>
+                    </span>
                   </Link>
                 </td>
 

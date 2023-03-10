@@ -54,9 +54,9 @@ const ExploreTable = ({
                 }
                 legacyBehavior={true}
               >
-                <a className="grid h-full items-center p-2 align-middle font-bold tracking-wide">
+                <span className="grid h-full items-center p-2 align-middle font-bold tracking-wide">
                   {attribute?.value}
-                </a>
+                </span>
               </Link>
             </td>
             <td className="pr-3">{formatNumber(attribute?.tokenCount)}</td>
@@ -87,13 +87,13 @@ const ExploreTable = ({
                       )}=${formatUrl(`${attribute?.value}`)}`
                 }
               >
-                <a>
+                <span>
                   <ExploreImages
                     sample_images={attribute?.sampleImages}
                     // @ts-ignore
                     value={attribute?.value}
                   />
-                </a>
+                </span>
               </Link>
             </td>
           </tr>

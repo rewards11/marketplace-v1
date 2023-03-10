@@ -5,7 +5,7 @@ import { FiExternalLink, FiRefreshCcw } from 'react-icons/fi'
 import { TokenDetails } from 'types/reservoir'
 import { setToast } from './setToast'
 import { mainnet } from 'wagmi/chains'
-
+import Link from 'next/link'
 const PROXY_API_BASE = process.env.NEXT_PUBLIC_PROXY_API_BASE
 
 type Props = {
@@ -76,7 +76,7 @@ const TokenInfo: FC<Props> = ({ token }) => {
           Token Info
         </div>
         <div className="flex items-center gap-2">
-          <a
+        <Link
             className="reservoir-h6 font-headings"
             target="_blank"
             rel="noopener noreferrer"
@@ -87,8 +87,8 @@ const TokenInfo: FC<Props> = ({ token }) => {
               alt="LooksRare Icon"
               className="h-6 w-6"
             />
-          </a>
-          <a
+          </Link>
+          <Link
             className="reservoir-h6 font-headings"
             target="_blank"
             rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const TokenInfo: FC<Props> = ({ token }) => {
               alt="OpenSea Icon"
               className="h-6 w-6"
             />
-          </a>
+         </Link>
         </div>
       </div>
       {token?.contract && (
@@ -108,15 +108,14 @@ const TokenInfo: FC<Props> = ({ token }) => {
             Contract Address
           </div>
           <div>
-            <a
+            <Link
               className="reservoir-h6 flex items-center gap-2 font-headings text-primary-700 dark:text-primary-100"
-              target="_blank"
-              rel="noopener noreferrer"
+             
               href={`${blockExplorerBaseUrl}/token/${token?.contract}?a=${token?.tokenId}`}
             >
               {truncateAddress(token?.contract)}
               <FiExternalLink className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
         </div>
       )}

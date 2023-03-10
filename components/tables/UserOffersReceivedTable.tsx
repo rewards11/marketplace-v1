@@ -134,7 +134,7 @@ const UserOffersReceivedTable: FC<Props> = ({
             >
               <div className="flex items-center justify-between">
                 <Link href={href || '#'} legacyBehavior={true}>
-                  <a className="flex items-center gap-2">
+                  <span className="flex items-center gap-2">
                     <div className="relative h-14 w-14">
                       {image && (
                         <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded">
@@ -158,7 +158,7 @@ const UserOffersReceivedTable: FC<Props> = ({
                         </div>
                       )}
                     </div>
-                  </a>
+                  </span>
                 </Link>
                 <div className="flex flex-col">
                   <FormatWEth amount={price} />
@@ -176,16 +176,16 @@ const UserOffersReceivedTable: FC<Props> = ({
                 <div>
                   <div className="flex items-center gap-1 text-xs font-light text-neutral-600 dark:text-neutral-300">
                     From{' '}
-                    <a
+                    <Link
                       href={`/address/${maker}`}
                       target="_blank"
                       rel="noreferrer"
                       className="flex gap-1 font-light text-primary-700 dark:text-primary-300"
                     >
                       {truncateAddress(maker)}
-                    </a>{' '}
+                    </Link>{' '}
                     via{' '}
-                    <a
+                    <Link
                       href={source.link || '#'}
                       target="_blank"
                       rel="noreferrer"
@@ -201,7 +201,7 @@ const UserOffersReceivedTable: FC<Props> = ({
                       <span className="max-w-[150px] overflow-hidden text-ellipsis whitespace-nowrap text-xs">
                         {source.name}
                       </span>
-                    </a>
+                    </Link>
                   </div>
                   <div className="text-xs font-light text-neutral-600 dark:text-neutral-300">{`Expires ${expiration}`}</div>
                 </div>
@@ -306,7 +306,7 @@ const UserOffersReceivedTable: FC<Props> = ({
                 {/* ITEM */}
                 <td className="whitespace-nowrap px-6 py-4">
                   <Link href={href || '#'} legacyBehavior={true}>
-                    <a className="flex items-center gap-2">
+                    <span className="flex items-center gap-2">
                       <div className="relative h-16 w-16">
                         {image && (
                           <div className="aspect-w-1 aspect-h-1 relative overflow-hidden rounded">
@@ -328,7 +328,7 @@ const UserOffersReceivedTable: FC<Props> = ({
                           {collectionName}
                         </div>
                       </span>
-                    </a>
+                    </span>
                   </Link>
                 </td>
 
@@ -408,19 +408,19 @@ const UserOffersReceivedTable: FC<Props> = ({
 
                 {/* MARKETPLACE */}
                 <td className="whitespace-nowrap px-6 py-4">
-                  <a
+                  <Link
                     href={`/address/${maker}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex gap-1 font-light text-primary-700 dark:text-primary-300"
                   >
                     {truncateAddress(maker)}
-                  </a>
+                  </Link>
                   <div className="mt-1 flex gap-1">
                     <span className="font-light text-neutral-600 dark:text-neutral-300">
                       via
                     </span>
-                    <a
+                    <Link
                       href={source.link || '#'}
                       target="_blank"
                       rel="noreferrer"
@@ -436,7 +436,7 @@ const UserOffersReceivedTable: FC<Props> = ({
                       <span className="max-w-[200px] overflow-hidden text-ellipsis">
                         {source.name}
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </td>
 
