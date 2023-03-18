@@ -56,6 +56,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
               <th
                 key={item}
                 scope="col"
+                style={{ color: '#fff', padding: 8, textAlign: 'left' }}
                 className="reservoir-subtitle px-6 py-3 text-left dark:text-white"
               >
                 {item}
@@ -93,29 +94,21 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                 ref={
                   index === arr.length - 5 && shouldInfiniteLoad ? ref : null
                 }
-                className={`${
-                  index === arr.length - 1 ||
+                className={`${index === arr.length - 1 ||
                   (FOOTER_ENABLED && !expanded && index == 9)
-                    ? ''
-                    : 'border-b'
-                } group h-[88px] border-neutral-300 dark:border-neutral-600 dark:text-white`}
+                  ? ''
+                  : 'border-b'
+                  } group h-[88px] border-neutral-300 dark:border-neutral-600 dark:text-white`}
               >
                 {/* COLLECTION */}
-                <td className="reservoir-body flex items-center gap-4 whitespace-nowrap px-6 py-4 dark:text-white">
-                  <div className="reservoir-h6 mr-6 dark:text-white">
+                <td style={{ display: 'flex', alignItems: 'center' }} >
+                  <div style={{ marginLeft: 10, marginRight: 20 }}>
                     {index + 1}
                   </div>
                   <Link href={tokenHref} legacyBehavior={true}>
-                    <span className="flex items-center gap-2">
-                      <img
-                        src={optimizeImage(image, 140)}
-                        className="h-[56px] w-[56px] rounded-full object-cover"
-                      />
-                      <div
-                        className={`reservoir-h6 overflow-hidden truncate whitespace-nowrap dark:text-white ${
-                          isSmallDevice ? 'max-w-[140px]' : ''
-                        }`}
-                      >
+                    <span style={{ display: 'flex', alignItems: 'center' }} className="flex items-center gap-2">
+                      <img src={optimizeImage(image, 140)} style={{ width: 56, height: 56, borderRadius: 100 }} />
+                      <div style={{ marginLeft: 10 }} >
                         {name}
                       </div>
                     </span>
@@ -130,8 +123,8 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                         sort === '7DayVolume'
                           ? days7
                           : sort === '30DayVolume'
-                          ? days30
-                          : days1
+                            ? days30
+                            : days1
                       }
                     />
                     <PercentageChange
@@ -139,8 +132,8 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                         sort === '7DayVolume'
                           ? days7Change
                           : sort === '30DayVolume'
-                          ? days30Change
-                          : days1Change
+                            ? days30Change
+                            : days1Change
                       }
                     />
                   </td>
@@ -154,8 +147,8 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                       sort === '7DayVolume'
                         ? floorSaleChange7Days
                         : sort === '30DayVolume'
-                        ? floorSaleChange30Days
-                        : floorSaleChange1Days
+                          ? floorSaleChange30Days
+                          : floorSaleChange1Days
                     }
                   />
                 </td>
@@ -177,14 +170,18 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
       )}
 
       {FOOTER_ENABLED && !expanded && (
-        <button
-          className="btn-primary-outline mx-auto my-3 border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
-          onClick={() => {
-            setExpanded(true)
-          }}
-        >
-          Load More
-        </button>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+          <button
+            style={{ padding: 8 }}
+            // className="btn-primary-outline mx-auto my-3 border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
+            onClick={() => {
+              setExpanded(true)
+            }}
+          >
+            Load More
+          </button>
+        </div>
+
       )}
     </div>
   )
@@ -195,8 +192,8 @@ export default TrendingCollectionTable
 function processCollection(
   collection:
     | NonNullable<
-        NonNullable<Props['fallback']['collections']>['collections']
-      >[0]
+      NonNullable<Props['fallback']['collections']>['collections']
+    >[0]
     | undefined
 ) {
   const data = {

@@ -5,21 +5,21 @@ import setParams from 'lib/params'
 import Head from 'next/head'
 import TrendingCollectionTable from 'components/TrendingCollectionTable'
 import SortTrendingCollections from 'components/SortTrendingCollections'
-import Footer from 'components/Footer'
+// import Footer from 'components/Footer'
 import { useMediaQuery } from '@react-hookz/web'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 
 
-import About from "../src/components/About";
-import Collection from "../src/components/Collection";
-import Contact from "../src/components/Contact";
-import FunFacts from "../src/components/FunFacts";
-import HeroSlider from "../src/components/HeroSlider";
-import News from "../src/components/News";
-import RoadMapSlider from "../src/components/RoadMapStep";
-import SectionDivider from "../src/components/SectionDivider";
+// import About from "../src/components/About";
+// import Collection from "../src/components/Collection";
+// import Contact from "../src/components/Contact";
+// import FunFacts from "../src/components/FunFacts";
+// import HeroSlider from "../src/components/HeroSlider";
+// import News from "../src/components/News";
+// import RoadMapSlider from "../src/components/RoadMapStep";
+// import SectionDivider from "../src/components/SectionDivider";
 // Environment variables
 // For more information about these variables
 // refer to the README.md file on this repository
@@ -93,12 +93,12 @@ const Home: NextPage<Props> = ({ fallback }) => {
         {description}
         {image}
       </Head>
-      <SectionDivider />
+      <div style={{ height: 160 }}></div>
       <header className="col-span-full mb-12 mt-[66px] px-4 md:mt-40 lg:px-0">
-        <h1 className="reservoir-h1 text-center dark:text-white">{tagline}</h1>
+        <h1 style={{ textAlign: 'center' }}>{tagline}</h1>
       </header>
-      <div className="col-span-full px-6 md:px-16">
-        <div className="mb-9 flex w-full items-center justify-between">
+      <div style={{ padding: 30 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }} >
           <div className="reservoir-h4 dark:text-white">
             Trending Collections
           </div>
@@ -113,7 +113,7 @@ const Home: NextPage<Props> = ({ fallback }) => {
 
 
       {/* // <Layout navbar={{}}> */}
-      <HeroSlider />
+      {/* <HeroSlider />
 
       <FunFacts />
 
@@ -132,7 +132,9 @@ const Home: NextPage<Props> = ({ fallback }) => {
       <News />
 
       <SectionDivider />
-      <Contact />
+
+      <Contact /> */}
+
     </Layout>
   )
 }

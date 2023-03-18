@@ -43,9 +43,9 @@ const SearchCollections: FC<Props> = ({
     const pathname = `${PROXY_API_BASE}/search/collections/v1`
 
     const query: paths['/search/collections/v1']['get']['parameters']['query'] =
-      {
-        limit: 6,
-      }
+    {
+      limit: 6,
+    }
 
     if (communityId && communityId !== 'www' && communityId !== 'localhost') {
       query.community = communityId
@@ -110,22 +110,22 @@ const SearchCollections: FC<Props> = ({
         inputValue,
         reset,
       }) => (
-        <div
+        <div style={{ position: 'relative' }}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          style={{position:'relative'}}
+
         >
           {!isMobile && (
-            <FiSearch
-              className={`absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[#4b5563] dark:text-neutral-300 ${
-                focused ? 'text-[#9CA3AF]' : ''
-              }`}
+            <FiSearch style={{ width: 25, height: 25, position: 'absolute', padding: 2, top: 12, left: 10 }}
+            // className={`absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[#4b5563] dark:text-neutral-300 ${
+            //   focused ? 'text-[#9CA3AF]' : ''
+            // }`}
             />
           )}
           <input
             type="text"
             tabIndex={isMobile ? 1 : -1}
-            style={{position:'relative',width:'50%'}}
+            style={{ position: 'relative', width: '80%', paddingLeft: 40 }}
             // className={
             //   isMobile
             //     ? 'ml-[72px] h-[72px] w-full outline-none dark:bg-black'
@@ -156,11 +156,10 @@ const SearchCollections: FC<Props> = ({
             initialResults?.collections &&
             initialResults?.collections.length > 0 && (
               <div
-                className={`divide-y-[1px] divide-[#D1D5DB] overflow-hidden  border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600  ${
-                  isMobile
+                className={`divide-y-[1px] divide-[#D1D5DB] overflow-hidden  border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600  ${isMobile
                     ? 'top-[72px] border-y dark:bg-black'
                     : 'absolute top-[50px] z-10 w-full rounded-[8px] border dark:bg-neutral-900'
-                }`}
+                  }`}
                 {...getMenuProps()}
               >
                 {initialResults?.collections
@@ -182,11 +181,10 @@ const SearchCollections: FC<Props> = ({
                           setFocused(false)
                           setOpen && setOpen(false)
                         }}
-                        className={`flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${
-                          highlightedIndex === index
+                        className={`flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
                             ? 'bg-[#F3F4F6] dark:bg-neutral-600'
                             : ''
-                        }`}
+                          }`}
                       >
                         <img
                           src={
@@ -206,11 +204,10 @@ const SearchCollections: FC<Props> = ({
             )}
           {(focused || isOpen) && inputValue !== '' && isEmpty && (
             <div
-              className={`absolute z-10 w-full divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${
-                isMobile
+              className={`absolute z-10 w-full divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
                   ? 'top-[72px] border-y dark:bg-black'
                   : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
-              }`}
+                }`}
               {...getMenuProps()}
             >
               <div className="flex items-center p-4">No collections found</div>
@@ -218,11 +215,10 @@ const SearchCollections: FC<Props> = ({
           )}
           {(focused || isOpen) && inputValue !== '' && !isEmpty && (
             <div
-              className={`absolute z-10 w-full divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${
-                isMobile
+              className={`absolute z-10 w-full divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
                   ? 'top-[72px] border-y dark:bg-black'
                   : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
-              }`}
+                }`}
               {...getMenuProps()}
             >
               {results?.collections?.slice(0, 6).map((collection, index) => (
@@ -242,11 +238,10 @@ const SearchCollections: FC<Props> = ({
                       setFocused(false)
                       setOpen && setOpen(false)
                     }}
-                    className={`flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${
-                      highlightedIndex === index
+                    className={`flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
                         ? 'bg-[#F3F4F6] dark:bg-neutral-600'
                         : ''
-                    }`}
+                      }`}
                   >
                     <img
                       src={

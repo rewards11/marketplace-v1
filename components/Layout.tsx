@@ -8,9 +8,6 @@ import VideoPopup from "../src/components/popup/VideoPopup";
 import PreLoader from "../src/layout/PreLoader";
 import { dataBgImg, holdSection, imgToSVG } from "../src/utilits";
 
-
-
-
 import Footer from "./Footer";
 import Header from "../src/layout/Header";
 import MobileNavigation from "../src/layout/MobileNavigation";

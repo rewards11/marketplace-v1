@@ -20,10 +20,10 @@ const SearchMenu: FC<Props> = ({ communityId, initialResults }) => {
       </Dialog.Trigger>
 
       <Dialog.Content className="fixed inset-0 z-20 transform bg-white shadow-md dark:bg-black">
-        <div style={{position:'relative'}}>
+        <div style={{ position: 'relative' }}>
           <Dialog.Close
             tabIndex={-1}
-            style={{position:'absolute',top:36}}
+            style={{ position: 'absolute', top: 36 }}
           >
             <HiArrowLeft className="h-4 w-4" />
           </Dialog.Close>
