@@ -10,6 +10,16 @@ import { useMediaQuery } from '@react-hookz/web'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
+
+
+import About from "../src/components/About";
+import Collection from "../src/components/Collection";
+import Contact from "../src/components/Contact";
+import FunFacts from "../src/components/FunFacts";
+import HeroSlider from "../src/components/HeroSlider";
+import News from "../src/components/News";
+import RoadMapSlider from "../src/components/RoadMapStep";
+import SectionDivider from "../src/components/SectionDivider";
 // Environment variables
 // For more information about these variables
 // refer to the README.md file on this repository
@@ -83,6 +93,7 @@ const Home: NextPage<Props> = ({ fallback }) => {
         {description}
         {image}
       </Head>
+      <SectionDivider />
       <header className="col-span-full mb-12 mt-[66px] px-4 md:mt-40 lg:px-0">
         <h1 className="reservoir-h1 text-center dark:text-white">{tagline}</h1>
       </header>
@@ -95,7 +106,33 @@ const Home: NextPage<Props> = ({ fallback }) => {
         </div>
         <TrendingCollectionTable fallback={fallback} />
       </div>
-      <Footer />
+      {/* <Footer /> */}
+      {/* </Layout> */}
+
+
+
+
+      {/* // <Layout navbar={{}}> */}
+      <HeroSlider />
+
+      <FunFacts />
+
+      <About />
+
+      <SectionDivider />
+
+      <Collection />
+
+      <SectionDivider />
+
+      <RoadMapSlider />
+
+      <SectionDivider />
+
+      <News />
+
+      <SectionDivider />
+      <Contact />
     </Layout>
   )
 }

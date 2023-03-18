@@ -113,7 +113,7 @@ const SearchCollections: FC<Props> = ({
         <div
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          className="relative"
+          style={{position:'relative'}}
         >
           {!isMobile && (
             <FiSearch
@@ -125,11 +125,12 @@ const SearchCollections: FC<Props> = ({
           <input
             type="text"
             tabIndex={isMobile ? 1 : -1}
-            className={
-              isMobile
-                ? 'ml-[72px] h-[72px] w-full outline-none dark:bg-black'
-                : `reservoir-label-l input-primary-outline w-full pl-9 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:ring-primary-900 dark:placeholder:text-neutral-400  dark:focus:ring-4 lg:w-[447px]`
-            }
+            style={{position:'relative',width:'50%'}}
+            // className={
+            //   isMobile
+            //     ? 'ml-[72px] h-[72px] w-full outline-none dark:bg-black'
+            //     : `reservoir-label-l input-primary-outline w-full pl-9 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:ring-primary-900 dark:placeholder:text-neutral-400  dark:focus:ring-4 lg:w-[447px]`
+            // }
             placeholder="Search for a collection"
             {...getInputProps()}
           />

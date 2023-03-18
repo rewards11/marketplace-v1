@@ -1,0 +1,121 @@
+import Link from "next/link";
+import { Fragment, useState } from "react";
+import { connect } from "react-redux";
+import { navigationToggle, walletToggle } from "../redux/actions/siteSettings";
+const MobileNavigation = ({ walletToggle, navigationToggle }) => {
+  const [toggle, setToggle] = useState(false);
+  return (
+    <Fragment>
+      <div className="metaportal_fn_mobnav">
+        <div className="mob_top">
+          <div className="social_trigger">
+            <div className="trigger" onClick={() => navigationToggle(true)}>
+              <span />
+            </div>
+            <div className="social">
+              <ul>
+                <li>
+                  <Link
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Fb.
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.twitter.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Tw.
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    In.
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ln.
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="wallet">
+            <Link
+              href="#"
+              className="metaportal_fn_button wallet_opener"
+              onClick={() => walletToggle(true)}
+            >
+              <span>Wallet</span>
+            </Link>
+          </div>
+        </div>
+        <div className="mob_mid">
+          <div className="logo">
+            <Link href="/" legacyBehavior={true}>
+              <a>
+                <img src="/img/logo.png" alt="" />
+              </a>
+            </Link>
+          </div>
+          <div
+            className={`trigger ${toggle ? "active" : ""}`}
+            onClick={() => setToggle(!toggle)}
+          >
+            <span />
+          </div>
+        </div>
+        <div className="mob_bot" style={{ display: toggle ? "block" : "none" }}>
+          <ul>
+            <li>
+              <Link className="creative_link" href="#home">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" href="#about">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" href="#collection">
+                Collection
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" href="#news">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" href="#contact">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  navigation: state.site.navigation,
+});
+
+export default connect(mapStateToProps, { walletToggle, navigationToggle })(
+  MobileNavigation
+);

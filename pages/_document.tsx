@@ -91,13 +91,13 @@ const MyDocument = function () {
         <meta />
       )}
 
-      {FONT_URLS ? (
+      {/* {FONT_URLS ? (
         FONT_URLS.split(',').map((link, i) => (
           <link key={i} href={link} rel="stylesheet" />
         ))
       ) : (
         <meta />
-      )}
+      )} */}
 
       <body className="bg-white text-neutral-800 dark:bg-black dark:text-white">
         <Main />
