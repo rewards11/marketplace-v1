@@ -53,6 +53,7 @@ const Layout: FC<Props> = ({ children, navbar }) => {
         {/* Header */}
         <Navbar />
         {/* !Header */}
+        <div style={{height:100}}></div>
         {/* Content */}
         <div className="metaportal_fn_content">
           {children}
