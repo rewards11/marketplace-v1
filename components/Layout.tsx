@@ -24,7 +24,7 @@ type Props = {
 
 const Layout: FC<Props> = ({ children, navbar }) => {
   useEffect(() => {
-    holdSection();
+    // holdSection();
     imgToSVG();
     dataBgImg();
   }, []);
@@ -63,7 +63,7 @@ const Layout: FC<Props> = ({ children, navbar }) => {
         </div>
         {/* !Content */}
         {/* Social */}
-        <Social />
+        {/* <Social /> */}
         {/* !Social */}
         {/* Totop */}
         <ScrollTop />

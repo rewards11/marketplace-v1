@@ -166,7 +166,9 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
       </table>
 
       {FOOTER_ENABLED && expanded && collections.isValidating && (
-        <CgSpinner className="mx-auto h-6 w-6 animate-spin" />
+         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+        <CgSpinner style={{width:20,height:25,display: 'flex', justifyContent: 'center', alignItems: 'center',}} className="mx-auto h-6 w-6 animate-spin" />
+        </div>
       )}
 
       {FOOTER_ENABLED && !expanded && (
