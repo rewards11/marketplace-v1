@@ -53,7 +53,12 @@ html{
 	margin-top: auto;
 }
 
-
+table tr{
+border:none !important;
+}
+table th{
+	border:none !important;
+	}
 /* Preloader */
 .metaportal_fn_preloader{
 	position: fixed;
@@ -274,7 +279,7 @@ input[type="text"]{
 	letter-spacing: 0;
 	line-height: 46px;
 	height: 50px;
-	padding: 0 15px;
+	padding: 0 35px;
 	outline: none;
 	outline-color: transparent;
 }
@@ -780,9 +785,6 @@ a.full_link{
 
 /* Header */
 .header{
-	display: flex;
-    justify-content: space-between;
-    width: 100%;
 	padding: 30px;
 	position: fixed;
 	top: 0;
@@ -816,19 +818,19 @@ a.full_link{
 	border-bottom-color: rgba(255,255,255,.08);
 }
 .header .header_in{
-	width:100%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	flex: 1;
 	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
 }
 .header .nav{
 	opacity: 0;
-	width: 40%;
+	flex: 0.3;
 }
 .header .trigger_logo{
 	display: -webkit-flex;
@@ -836,6 +838,8 @@ a.full_link{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	flex: 0.1;
+	justify-content: center;
 	-ms-align-items: center;
 	align-items: center;
 }
@@ -921,13 +925,28 @@ a.full_link{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: center;
-	margin-left: -45px;
+	padding: 0px 40px;
+	justify-content: space-between;
 }
 .header .nav li{
 	margin: 0;
-	margin-left: 45px;
+	display: flex;
+	justify-content: space-between;
 }
+.nav_first_child{
+width: 22%;
+}
+.nav_first_child span:hover{
+	color: rgb(19, 2, 19);
+	}
+.nav_second_child{
+width: 64%;
+padding: 0px 10px;
+}
+.header .nav li:hover {
+	color: #cc00ff;
+	cursor: pointer;
+  }
 .header .nav a{
 	font-family: var(--hff);
 	font-size: 18px;

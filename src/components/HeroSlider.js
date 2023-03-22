@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useEffect } from "react";
 
 const HeroSlider = () => {
@@ -155,12 +154,12 @@ const HeroSlider = () => {
               <li className="next" data-index={3}>
                 <div className="item has_video">
                   <img src="/img/1x1.jpg" alt="" />
-                  <Link
+                  <a
                     className="popup-youtube metaportal_fn_videobutton"
                     href="https://www.youtube.com/embed/7e90gBu4pas"
                   >
                     <img src="/svg/play.svg" alt="" className="fn__svg" />
-                  </Link>
+                  </a>
                   <div className="item_in">
                     <div className="img" data-bg-img="/img/slider/3.jpg" />
                   </div>
@@ -201,24 +200,20 @@ const HeroSlider = () => {
             </ul>
           </div>
           <div className="slider_nav">
-            <Link href="#" className="prev">
-              <span>
-                <span className="circle" />
-                <span className="icon">
-                  <img src="/svg/down.svg" alt="" className="fn__svg" />
-                </span>
-                <span className="circle" />
+            <a href="#" className="prev">
+              <span className="circle" />
+              <span className="icon">
+                <img src="/svg/down.svg" alt="" className="fn__svg" />
               </span>
-            </Link>
-            <Link href="#" className="next">
-              <span>
-                <span className="circle" />
-                <span className="icon">
-                  <img src="/svg/down.svg" alt="" className="fn__svg" />
-                </span>
-                <span className="circle" />
+              <span className="circle" />
+            </a>
+            <a href="#" className="next">
+              <span className="circle" />
+              <span className="icon">
+                <img src="/svg/down.svg" alt="" className="fn__svg" />
               </span>
-            </Link>
+              <span className="circle" />
+            </a>
           </div>
         </div>
         {/* !Slider */}
@@ -230,14 +225,14 @@ const HeroSlider = () => {
             are stored as ERC-721 tokens on the Ethereum blockchain and hosted
             on IPFS.
           </p>
-          <Link
+          <a
             href="https://opensea.io/"
             className="metaportal_fn_button"
             target="_blank"
             rel="noreferrer"
           >
             <span>Buy On Opensea</span>
-          </Link>
+          </a>
         </div>
         {/* !Description */}
       </div>

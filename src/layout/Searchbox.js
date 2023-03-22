@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Fragment } from "react";
 import { connect } from "react-redux";
 import { searchToggle } from "../redux/actions/siteSettings";
@@ -13,9 +12,9 @@ const Searchbox = ({ searchToggle, search }) => {
         <div className="container small">
           <div className="searchbox">
             <input type="text" placeholder="Search here..." />
-            <Link href="#">
+            <a href="#">
               <img src="/svg/loupe.svg" alt="" className="fn__svg" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

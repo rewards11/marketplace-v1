@@ -31,14 +31,15 @@ const SortTrendingCollections: FC = () => {
 
   return (
     <DropdownMenu.Root onOpenChange={setOpen}>
-      <DropdownMenu.Trigger style={{ padding: 8, margin: 4 }}
-        className="btn-primary-outline w-[228px] justify-between px-4 py-3 dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4"
+      <DropdownMenu.Trigger
+        className='metaportal_fn_button'
+      //  className="btn-primary-outline w-[228px] justify-between px-4 py-3 dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4"
       >
-        <span className="reservoir-label-l dark:text-gray-100">
+        <span className="reservoir_fn_button">
           {sortSelection}
         </span>
         <FiChevronDown
-          className={`h-5 w-5 text-[#9CA3AF] transition-transform ${open ? 'rotate-180' : ''
+          className={`select-icon h-5 w-5 text-[#9CA3AF] transition-transform ${open ? 'rotate-180' : ''
             }`}
         />
       </DropdownMenu.Trigger>

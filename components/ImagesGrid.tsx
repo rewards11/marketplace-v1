@@ -20,6 +20,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
             // SMALLER IMAGE, HAS SIDE IMAGES
             <img
               src={optimizeImage(sample_images[0], 250)}
+              alt=""
               className="col-span-2 w-full rounded object-cover"
               width="224"
               height="224"
@@ -28,6 +29,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
             // BIG IMAGE, NO SIDE IMAGES
             <img
               src={optimizeImage(sample_images[0], 300)}
+              alt=""
               className="col-span-2 w-full rounded object-contain"
               width="300"
               height="300"
@@ -39,6 +41,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
                 <img
                   key={image}
                   src={optimizeImage(image, 70)}
+                  alt=""
                   width="70"
                   height="70"
                   className="w-[70px] rounded"
@@ -49,7 +52,7 @@ const ImagesGrid: FC<Props> = ({ sample_images, value }) => {
         </div>
       ) : (
         <div className="aspect-w-1 aspect-h-1 relative">
-          <img src="https://via.placeholder.com/250" width="250" height="250" />
+          <img src="https://via.placeholder.com/250" alt="" width="250" height="250" />
         </div>
       )}
     </>

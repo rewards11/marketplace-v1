@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Social = () => {
   return (
     <div id="social" className="hold">
@@ -7,36 +5,36 @@ const Social = () => {
         <h4 className="title">Follow Us:</h4>
         <ul>
           <li>
-            <Link
+            <a
               href="https://www.facebook.com/"
               target="_blank"
               rel="noreferrer"
             >
               Fb.
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="https://www.twitter.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.twitter.com/" target="_blank" rel="noreferrer">
               Tw.
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               href="https://www.instagram.com/"
               target="_blank"
               rel="noreferrer"
             >
               In.
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               href="https://www.linkedin.com/"
               target="_blank"
               rel="noreferrer"
             >
               Ln.
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

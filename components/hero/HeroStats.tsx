@@ -28,20 +28,16 @@ const HeroStats: FC<{ stats: Props }> = ({ stats }) => {
   const offerSourceLogo = `${API_BASE}/redirect/sources/${stats.topOfferSource}/logo/v2`
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 45, }}
-      className="grid min-w-full grid-cols-2 items-center gap-[1px] overflow-hidden rounded-lg border-[1px] border-gray-300 bg-gray-300 dark:border-[#525252] dark:bg-[#525252] md:m-0 md:h-[82px] md:min-w-[647px] md:grid-cols-4 md:gap-2 md:bg-white dark:md:bg-black"
-    >
+    <div className="grid min-w-full grid-cols-2 items-center gap-[1px] overflow-hidden rounded-lg border-[1px] border-gray-300 bg-gray-300 dark:border-[#525252] dark:bg-[#525252] md:m-0 md:h-[82px] md:min-w-[647px] md:grid-cols-4 md:gap-2 md:bg-white dark:md:bg-black">
       <Stat name="items">
-        <h3 style={{fontSize:'1rem',fontWeight:500 }} className="reservoir-h6 dark:text-white">
+        <h3 className="reservoir-h6 dark:text-white">
           {formatNumber(stats.count)}
         </h3>
       </Stat>
       <Stat name="top offer">
-        <h3 style={{ display: 'flex', alignItems: 'center', gap: 4,fontSize:'1rem',fontWeight:500  }} className="reservoir-h6 flex items-center dark:text-white">
+        <h3 className="reservoir-h6 flex items-center dark:text-white">
           {stats.topOfferSource && stats.topOffer && (
             <img
-              width={12}
-              height={12}
               className="mr-1 h-4 w-4"
               src={offerSourceLogo}
               alt="Source Logo"
@@ -55,13 +51,13 @@ const HeroStats: FC<{ stats: Props }> = ({ stats }) => {
         </h3>
       </Stat>
       <Stat name="floor">
-        <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4 ,fontSize:'1rem',fontWeight:500 }} className="reservoir-h6 flex items-center justify-center gap-1 dark:text-white">
+        <h3 className="reservoir-h6 flex items-center justify-center gap-1 dark:text-white">
           <FormatNativeCrypto amount={stats.floor} maximumFractionDigits={2} />
           <PercentageChange value={stats.floorChange} />
         </h3>
       </Stat>
       <Stat name="total volume">
-        <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,fontSize:'1rem',fontWeight:500 }} className="reservoir-h6 flex items-center justify-center gap-1 dark:text-white">
+        <h3 className="reservoir-h6 flex items-center justify-center gap-1 dark:text-white">
           <FormatNativeCrypto
             amount={stats.allTime}
             maximumFractionDigits={2}
@@ -76,9 +72,9 @@ const Stat: FC<{ name: string; children: ReactNode }> = ({
   name,
   children,
 }) => (
-  <div  className="flex h-20 flex-col items-center justify-center bg-white dark:bg-black md:h-auto">
+  <div className="flex h-20 flex-col items-center justify-center bg-white dark:bg-black md:h-auto">
     {children}
-    <p style={{textAlign:'center'}} className="mt-1 text-[#A3A3A3]">{name}</p>
+    <p className="mt-1 text-[#A3A3A3]">{name}</p>
   </div>
 )
 

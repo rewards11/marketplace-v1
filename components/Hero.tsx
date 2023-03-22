@@ -193,18 +193,15 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
   return (
     <>
       <HeroBackground banner={header.banner}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '1.5rem',gap:6 }}>
+        <div className="z-10 flex w-full flex-col items-center gap-6">
           <img
-            className={`h-20 w-20 rounded-full ${header.image ? 'visible' : 'hidden'
-              }`}
-              width={80}
-              height={80}
+            className={`h-20 w-20 rounded-full ${
+              header.image ? 'visible' : 'hidden'
+            }`}
             alt={`${header.name} Logo`}
             src={header.image}
           />
-          <h1 style={{fontSize:'1.5rem',fontWeight:500,textAlign:'center'}}
-           className="reservoir-h4 text-center text-black dark:text-white"
-           >
+          <h1 className="reservoir-h4 text-center text-black dark:text-white">
             {header.name}
           </h1>
           <HeroSocialLinks
@@ -239,8 +236,9 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                   }}
                 >
                   <FiChevronDown
-                    className={`h-5 w-5 text-black transition-transform dark:text-white ${descriptionExpanded ? 'rotate-180' : ''
-                      }`}
+                    className={`h-5 w-5 text-black transition-transform dark:text-white ${
+                      descriptionExpanded ? 'rotate-180' : ''
+                    }`}
                     aria-hidden
                   />
                 </span>

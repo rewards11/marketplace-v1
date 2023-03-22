@@ -15,60 +15,60 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
             <div className="social">
               <ul>
                 <li>
-                  <Link
+                  <a
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Fb.
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     href="https://www.twitter.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Tw.
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     In.
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Ln.
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="wallet">
-            <Link
+            <a
               href="#"
               className="metaportal_fn_button wallet_opener"
               onClick={() => walletToggle(true)}
             >
               <span>Wallet</span>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="mob_mid">
           <div className="logo">
-            <Link href="/" legacyBehavior={true}>
-              <a>
-                <img src="/img/logo.png" alt="" />
-              </a>
+            <Link href="/">
+
+              <img src="/img/logo.png" alt="" />
+
             </Link>
           </div>
           <div
@@ -81,29 +81,29 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
         <div className="mob_bot" style={{ display: toggle ? "block" : "none" }}>
           <ul>
             <li>
-              <Link className="creative_link" href="#home">
+              <a className="creative_link" href="#home">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="creative_link" href="#about">
+              <a className="creative_link" href="#about">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="creative_link" href="#collection">
+              <a className="creative_link" href="#collection">
                 Collection
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="creative_link" href="#news">
+              <a className="creative_link" href="#news">
                 Blog
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="creative_link" href="#contact">
+              <a className="creative_link" href="#contact">
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

@@ -110,27 +110,25 @@ const SearchCollections: FC<Props> = ({
         inputValue,
         reset,
       }) => (
-        <div style={{ position: 'relative' }}
+        <div
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-
+          className="relative"
         >
           {!isMobile && (
-            <FiSearch style={{ width: 25, height: 25, position: 'absolute', padding: 2, top: 12, left: 10 }}
-            // className={`absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[#4b5563] dark:text-neutral-300 ${
-            //   focused ? 'text-[#9CA3AF]' : ''
-            // }`}
+            <FiSearch
+              className={`absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[#4b5563] dark:text-neutral-300 ${focused ? 'text-[#9CA3AF]' : ''
+                }`}
             />
           )}
           <input
             type="text"
             tabIndex={isMobile ? 1 : -1}
-            style={{ position: 'relative', width: '80%', paddingLeft: 40 }}
-            // className={
-            //   isMobile
-            //     ? 'ml-[72px] h-[72px] w-full outline-none dark:bg-black'
-            //     : `reservoir-label-l input-primary-outline w-full pl-9 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:ring-primary-900 dark:placeholder:text-neutral-400  dark:focus:ring-4 lg:w-[447px]`
-            // }
+            className={
+              isMobile
+                ? 'ml-[72px] h-[72px] w-full outline-none dark:bg-black'
+                : `reservoir-label-l input-primary-outline w-full pl-9 pr-9 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:ring-primary-900 dark:placeholder:text-neutral-400  dark:focus:ring-4 lg:w-[447px]`
+            }
             placeholder="Search for a collection"
             {...getInputProps()}
           />
@@ -156,9 +154,9 @@ const SearchCollections: FC<Props> = ({
             initialResults?.collections &&
             initialResults?.collections.length > 0 && (
               <div
-                className={`divide-y-[1px] divide-[#D1D5DB] overflow-hidden  border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600  ${isMobile
-                    ? 'top-[72px] border-y dark:bg-black'
-                    : 'absolute top-[50px] z-10 w-full rounded-[8px] border dark:bg-neutral-900'
+                className={`sall w-[60%] divide-y-[1px] divide-[#D1D5DB] overflow-hidden  border-[#D1D5DB]  dark:divide-neutral-600 dark:border-neutral-600 pl-8 pr-8 bg-[#290d52]  ${isMobile
+                  ? 'top-[72px] border-y dark:bg-black'
+                  : '`w-[60%] absolute top-[50px] z-10 w-full rounded-[8px] border dark:bg-neutral-900'
                   }`}
                 {...getMenuProps()}
               >
@@ -166,6 +164,7 @@ const SearchCollections: FC<Props> = ({
                   .slice(0, 6)
                   .map((collection, index) => (
                     <Link
+                      // className="creative_link"
                       key={collection?.name}
                       href={`/collections/${collection?.collectionId}`}
                       legacyBehavior={true}
@@ -181,9 +180,10 @@ const SearchCollections: FC<Props> = ({
                           setFocused(false)
                           setOpen && setOpen(false)
                         }}
-                        className={`flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
-                            ? 'bg-[#F3F4F6] dark:bg-neutral-600'
-                            : ''
+
+                        className={`w-[60%] creative_link flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
+                          ? 'bg-[#F3F4F6] dark:bg-neutral-600'
+                          : ''
                           }`}
                       >
                         <img
@@ -203,26 +203,27 @@ const SearchCollections: FC<Props> = ({
               </div>
             )}
           {(focused || isOpen) && inputValue !== '' && isEmpty && (
-            <div
-              className={`absolute z-10 w-full divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
-                  ? 'top-[72px] border-y dark:bg-black'
-                  : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
+            <div 
+              className={`sall w-[60%] absolute bg-[#290d52] z-10 divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#fff] dark:divide-neutral-600 dark:border-neutral-600 pl-9 pr-9 pt-3 pb-3  border-b-2 ${isMobile
+                ? 'top-[72px] border-y dark:bg-black'
+                : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
                 }`}
               {...getMenuProps()}
             >
-              <div className="flex items-center p-4">No collections found</div>
+              <div className="flex items-center p-4 text-[#fff]">No collections found</div>
             </div>
           )}
           {(focused || isOpen) && inputValue !== '' && !isEmpty && (
             <div
-              className={`absolute z-10 w-full divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
-                  ? 'top-[72px] border-y dark:bg-black'
-                  : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
+              className={`sall w-[60%] absolute z-10 divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
+                ? 'top-[72px] border-y dark:bg-black'
+                : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
                 }`}
               {...getMenuProps()}
             >
               {results?.collections?.slice(0, 6).map((collection, index) => (
                 <Link
+                  // className="creative_link"
                   key={collection?.name}
                   href={`/collections/${collection?.collectionId}`}
                   legacyBehavior={true}
@@ -238,9 +239,9 @@ const SearchCollections: FC<Props> = ({
                       setFocused(false)
                       setOpen && setOpen(false)
                     }}
-                    className={`flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
-                        ? 'bg-[#F3F4F6] dark:bg-neutral-600'
-                        : ''
+                    className={`creative_link flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
+                      ? 'bg-[#F3F4F6] dark:bg-neutral-600'
+                      : ''
                       }`}
                   >
                     <img

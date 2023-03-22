@@ -126,7 +126,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
     )
   } else {
     return (
-      <div style={{display:'flex',gap:12}} className="flex gap-4">
+      <div className="flex gap-4">
         {typeof social.discordUrl === 'string' && (
           <Link
             className="flex-none"
@@ -137,7 +137,6 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
             <img
               src="/icons/Discord.svg"
               alt="Discord Icon"
-              style={{width:'1.5rem',height:'1.5rem'}}
               className="h-6 w-6"
             />
           </Link>
@@ -152,7 +151,6 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
             <img
               src="/icons/Twitter.svg"
               alt="Twitter Icon"
-              style={{width:'1.5rem',height:'1.5rem'}}
               className="h-6 w-6"
             />
           </Link>
@@ -163,7 +161,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
           rel="noopener noreferrer"
           href={social.blockExplorerUrl}
         >
-          <img style={{width:'1.5rem',height:'1.5rem'}} src={etherscanLogo} alt="Etherscan Icon" className="h-6 w-6" />
+          <img src={etherscanLogo} alt="Etherscan Icon" className="h-6 w-6" />
         </Link>
         {typeof social.externalUrl === 'string' && (
           <Link
@@ -172,7 +170,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
             rel="noopener noreferrer"
             href={social.externalUrl}
           >
-            <FiGlobe style={{width:'1.5rem',height:'1.5rem'}} className="h-6 w-6" />
+            <FiGlobe className="h-6 w-6" />
           </Link>
         )}
       </div>

@@ -20,7 +20,7 @@ const FormatCurrency: FC<Props> = ({
   return (
     <div className="inline-flex flex-none items-center gap-1">
       {value !== '-' ? children : null}
-      <span className="flex-grow whitespace-nowrap font-semibold">
+      <span className="percentage_val flex-grow whitespace-nowrap font-semibold">
         {value as any}
       </span>
     </div>

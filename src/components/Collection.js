@@ -156,10 +156,10 @@ const Collection = () => {
             are stored as ERC-721 tokens on the Ethereum blockchain and hosted
             on IPFS.
           </p>
-          <Link href="/collection" legacyBehavior={true}>
-            <a className="metaportal_fn_button">
-              <span>See All Collection</span>
-            </a>
+          <Link href="/collection" className="metaportal_fn_button">
+
+            <span>See All Collection</span>
+
           </Link>
         </div>
       </div>

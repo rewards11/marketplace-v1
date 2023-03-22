@@ -49,9 +49,8 @@ const ConnectWallet: FC = () => {
 
       <DropdownMenu.Content align="end" sideOffset={6}>
         <div
-          className={`w-48 space-y-1  bg-white px-1.5 py-2 shadow-md radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-56 ${
-            DISABLE_POWERED_BY_RESERVOIR ? 'rounded' : 'rounded-t'
-          }`}
+          className={`w-48 space-y-1  bg-white px-1.5 py-2 shadow-md radix-side-bottom:animate-slide-down dark:bg-neutral-900 md:w-56 ${DISABLE_POWERED_BY_RESERVOIR ? 'rounded' : 'rounded-t'
+            }`}
         >
           <div className="group flex w-full items-center justify-between rounded px-4 py-3 outline-none transition">
             {ensName ? (
@@ -91,7 +90,7 @@ const ConnectWallet: FC = () => {
             <Link href="https://reservoirprotocol.github.io/" legacyBehavior={true}>
               <span
                 className="reservoir-tiny flex gap-2 dark:text-white"
-             
+
               >
                 Powered by{' '}
                 <img
@@ -100,6 +99,7 @@ const ConnectWallet: FC = () => {
                       ? `/reservoir_watermark_dark.svg`
                       : `/reservoir_watermark_light.svg`
                   }
+                  alt=""
                 />
               </span>
             </Link>

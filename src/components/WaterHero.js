@@ -1,4 +1,3 @@
-import { Link } from "@mui/material";
 import { useEffect } from "react";
 import WaterWave from "react-water-wave";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,14 +24,14 @@ const WaterHero = () => {
                 elements. The Legends are stored as ERC-721 tokens on the
                 Ethereum blockchain and hosted on IPFS.
               </p>
-              <Link
+              <a
                 href="https://opensea.io/"
                 className="metaportal_fn_button"
                 target="_blank"
                 rel="noreferrer"
               >
                 <span>Buy On Opensea</span>
-              </Link>
+              </a>
             </div>
             <div className="slider_part">
               <Swiper {...Hero4Slider} className="swiper-container">
@@ -70,12 +69,12 @@ const WaterHero = () => {
                           style={{}}
                         />
                         <img src="/img/1x1.jpg" alt="" />
-                        <Link
+                        <a
                           className="popup-youtube metaportal_fn_videobutton"
                           href="https://www.youtube.com/embed/7e90gBu4pas"
                         >
                           <img src="/svg/play.svg" alt="" className="fn__svg" />
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </SwiperSlide>

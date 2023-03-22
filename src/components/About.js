@@ -56,14 +56,14 @@ const About = () => {
                 pretium et, tempus at libero.
               </p>
             </div>
-            <Link
+            <a
               href="https://discord.com/"
               className="metaportal_fn_button"
               target="_blank"
               rel="noreferrer"
             >
               <span>Find us On Discord</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -111,10 +111,10 @@ const About = () => {
                 pretium et, tempus at libero.
               </p>
             </div>
-            <Link href="/nft-single" legacyBehavior={true}>
-              <a className="metaportal_fn_button">
-                <span>How to Mint</span>
-              </a>
+            <Link href="/nft-single" className="metaportal_fn_button">
+
+              <span>How to Mint</span>
+
             </Link>
           </div>
           <div className="right_part">
@@ -159,12 +159,12 @@ const About = () => {
             {/* Video Shortcode */}
             <div className="fn_cs_video">
               <img src="/img/video/1.jpg" alt="" />
-              <Link
+              <a
                 className="popup-youtube"
                 href="https://www.youtube.com/embed/7e90gBu4pas"
               >
                 <img src="/svg/play.svg" alt="" className="fn__svg" />
-              </Link>
+              </a>
             </div>
             {/* /Video Shortcode */}
           </div>
@@ -201,14 +201,14 @@ export const About2 = () => (
               traditional anime style and composited by Layla Efiyo.
             </p>
           </div>
-          <Link
+          <a
             href="https://discord.com/"
             className="metaportal_fn_button"
             target="_blank"
             rel="noreferrer"
           >
             <span>Find us On Discord</span>
-          </Link>
+          </a>
         </div>
         <div className="about_right">
           <div className="abs_img" data-bg-img="/img/about/2.jpg" />
@@ -232,12 +232,12 @@ export const About2 = () => (
     </div>
     <div className="fn_cs_video bg">
       <div className="abs_img" data-bg-img="/img/video/1.jpg" />
-      <Link
+      <a
         className="popup-youtube"
         href="https://www.youtube.com/embed/7e90gBu4pas"
       >
         <img src="/svg/play.svg" alt="" className="fn__svg" />
-      </Link>
+      </a>
     </div>
     <div className="container">
       {/* Steps Shortcode */}
@@ -290,22 +290,22 @@ export const About2 = () => (
             believable.
           </p>
           <div className="buttons">
-            <Link
+            <a
               href="https://opensea.io/"
               className="metaportal_fn_button"
               target="_blank"
               rel="noreferrer"
             >
               <span>Buy On Opensea</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="#"
               className="metaportal_fn_button"
               target="_blank"
               rel="noreferrer"
             >
               <span>WhiteList Now</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

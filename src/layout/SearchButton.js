@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { connect } from "react-redux";
 import { searchToggle } from "../redux/actions/siteSettings";
 const SearchButton = ({ searchToggle }) => {
   return (
-    <Link
+    <a
       href="#"
       className="metaportal_fn_search hold"
       onClick={(e) => {
@@ -14,7 +13,7 @@ const SearchButton = ({ searchToggle }) => {
       <span className="icon">
         <img src="/svg/loupe.svg" alt="" className="fn__svg" />
       </span>
-    </Link>
+    </a>
   );
 };
 export default connect(null, { searchToggle })(SearchButton);

@@ -56,7 +56,6 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
               <th
                 key={item}
                 scope="col"
-                style={{ color: '#fff', padding: 8, textAlign: 'left' }}
                 className="reservoir-subtitle px-6 py-3 text-left dark:text-white"
               >
                 {item}
@@ -97,18 +96,32 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                 className={`${index === arr.length - 1 ||
                   (FOOTER_ENABLED && !expanded && index == 9)
                   ? ''
-                  : 'border-b'
-                  } group h-[88px] border-neutral-300 dark:border-neutral-600 dark:text-white`}
+                  : ''
+                  } group h-[88px] dark:text-white`}
               >
                 {/* COLLECTION */}
-                <td style={{ display: 'flex', alignItems: 'center' }} >
-                  <div style={{ marginLeft: 10, marginRight: 20 }}>
+                <td className="reservoir-body flex items-center gap-4 whitespace-nowrap px-6 py-4 dark:text-white">
+                  {/* <div className="blog__item">
+                    <div className="counter">
+                      <span className="cc">
+                        <span> {index + 1}</span>
+                      </span>
+                    </div>
+                  </div> */}
+                  <div className="cc1 reservoir-h6 mr-6 dark:text-white">
                     {index + 1}
                   </div>
                   <Link href={tokenHref} legacyBehavior={true}>
-                    <span style={{ display: 'flex', alignItems: 'center' }} className="flex items-center gap-2">
-                      <img src={optimizeImage(image, 140)} style={{ width: 56, height: 56, borderRadius: 100 }} />
-                      <div style={{ marginLeft: 10 }} >
+                    <span className="flex items-center gap-2">
+                      <img
+                        src={optimizeImage(image, 140)}
+                        alt=""
+                        className="h-[56px] w-[56px] rounded-full object-cover"
+                      />
+                      <div
+                        className={`hov_ch reservoir-h6 overflow-hidden truncate whitespace-nowrap dark:text-white ${isSmallDevice ? 'max-w-[140px]' : ''
+                          }`}
+                      >
                         {name}
                       </div>
                     </span>
@@ -155,7 +168,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
 
                 {/* SUPPLY */}
                 {!isSmallDevice && (
-                  <td className="reservoir-body whitespace-nowrap px-6 py-4 dark:text-white">
+                  <td className="per_val reservoir-body whitespace-nowrap px-6 py-4 dark:text-white">
                     {supply ? formatNumber(+supply) : '-'}
                   </td>
                 )}
@@ -166,21 +179,19 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
       </table>
 
       {FOOTER_ENABLED && expanded && collections.isValidating && (
-         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-        <CgSpinner style={{width:20,height:25,display: 'flex', justifyContent: 'center', alignItems: 'center',}} className="mx-auto h-6 w-6 animate-spin" />
-        </div>
+        <CgSpinner className="mx-auto h-6 w-6 animate-spin" />
       )}
 
       {FOOTER_ENABLED && !expanded && (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+        <div className="center_ali">
           <button
-            style={{ padding: 8 }}
+            className="metaportal_fn_button"
             // className="btn-primary-outline mx-auto my-3 border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
             onClick={() => {
               setExpanded(true)
             }}
           >
-            Load More
+            <span>Load More</span>
           </button>
         </div>
 

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Fragment } from "react";
 import { connect } from "react-redux";
 import { walletToggle } from "../redux/actions/siteSettings";
@@ -10,9 +9,9 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
         onClick={() => walletToggle(false)}
       />
       <div className={`metaportal_fn_walletbox ${wallet ? "active" : ""}`}>
-        <Link href="#" className="fn__closer" onClick={() => walletToggle(false)}>
+        <a href="#" className="fn__closer" onClick={() => walletToggle(false)}>
           <span />
-        </Link>
+        </a>
         <div className="walletbox">
           <div className="title_holder">
             <h3>Connect Wallet</h3>
@@ -25,50 +24,38 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
             <ul className="metaportal_fn_items">
               <li>
                 <div className="item">
-                  <Link href="#" >
-                    <span>
-                      <span className="icon">
-                        <img src="/img/wallet/metamask.png" alt="" />
-                      </span>
-                      <span className="text">Metamask</span>
-                    </span>
-                  </Link>
+                  <a href="#" />
+                  <span className="icon">
+                    <img src="/img/wallet/metamask.png" alt="" />
+                  </span>
+                  <span className="text">Metamask</span>
                 </div>
               </li>
               <li>
                 <div className="item">
-                  <Link href="#" >
-                    <span>
-                      <span className="icon">
-                        <img src="/img/wallet/coinbase.png" alt="" />
-                      </span>
-                      <span className="text">Coinbase</span>
-                    </span>
-                  </Link>
+                  <a href="#" />
+                  <span className="icon">
+                    <img src="/img/wallet/coinbase.png" alt="" />
+                  </span>
+                  <span className="text">Coinbase</span>
                 </div>
               </li>
               <li>
                 <div className="item">
-                  <Link href="#">
-                    <span>
-                      <span className="icon">
-                        <img src="/img/wallet/walletconnect.png" alt="" />
-                      </span>
-                      <span className="text">WalletConnect</span>
-                    </span>
-                  </Link>
+                  <a href="#" />
+                  <span className="icon">
+                    <img src="/img/wallet/walletconnect.png" alt="" />
+                  </span>
+                  <span className="text">WalletConnect</span>
                 </div>
               </li>
               <li>
                 <div className="item">
-                  <Link href="#">
-                    <span>
-                      <span className="icon">
-                        <img src="/img/wallet/venly.png" alt="" />
-                      </span>
-                      <span className="text">Venly</span>
-                    </span>
-                  </Link>
+                  <a href="#" />
+                  <span className="icon">
+                    <img src="/img/wallet/venly.png" alt="" />
+                  </span>
+                  <span className="text">Venly</span>
                 </div>
               </li>
             </ul>

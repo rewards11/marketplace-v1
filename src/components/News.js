@@ -25,23 +25,23 @@ const News = () => {
                 </div>
                 <div className="title">
                   <h3>
-                    <Link href="/blog-single" legacyBehavior={true}>
-                      <a>Reasons Why People Use Discord</a>
+                    <Link href="/blog-single">
+                      Reasons Why People Use Discord
                     </Link>
                   </h3>
                 </div>
                 <div className="image">
-                  <Link href="/blog-single" legacyBehavior={true}>
-                    <a>
-                      <img src="/img/blog/1.jpg" alt="" />
-                    </a>
+                  <Link href="/blog-single">
+
+                    <img src="/img/blog/1.jpg" alt="" />
+
                   </Link>
                 </div>
                 <div className="read_more">
-                  <Link href="/blog-single" legacyBehavior={true}>
-                    <a>
-                      <span>Read More</span>
-                    </a>
+                  <Link href="/blog-single">
+
+                    <span>Read More</span>
+
                   </Link>
                 </div>
               </div>
@@ -58,16 +58,16 @@ const News = () => {
                 </div>
                 <div className="title">
                   <h3>
-                    <Link href="/blog-single" legacyBehavior={true}>
-                      <a>Trial-By-Combat: The Death Cup</a>
+                    <Link href="/blog-single">
+                      Trial-By-Combat: The Death Cup
                     </Link>
                   </h3>
                 </div>
                 <div className="read_more">
-                  <Link href="/blog-single" legacyBehavior={true}>
-                    <a>
-                      <span>Read More</span>
-                    </a>
+                  <Link href="/blog-single">
+
+                    <span>Read More</span>
+
                   </Link>
                 </div>
               </div>
@@ -82,16 +82,16 @@ const News = () => {
                 </div>
                 <div className="title">
                   <h3>
-                    <Link href="/blog-single" legacyBehavior={true}>
-                      <a>Graffiti Racer Research Center #10</a>
+                    <Link href="/blog-single">
+                      Graffiti Racer Research Center #10
                     </Link>
                   </h3>
                 </div>
                 <div className="read_more">
-                  <Link href="/blog-single" legacyBehavior={true}>
-                    <a>
-                      <span>Read More</span>
-                    </a>
+                  <Link href="/blog-single">
+
+                    <span>Read More</span>
+
                   </Link>
                 </div>
               </div>
@@ -105,10 +105,10 @@ const News = () => {
                   <p>August 09, 2022 / MetaVerse / 4 Comments</p>
                 </div>
                 <div className="read_more">
-                  <Link href="/blog-single" legacyBehavior={true}>
-                    <a>
-                      <span>Read More</span>
-                    </a>
+                  <Link href="/blog-single">
+
+                    <span>Read More</span>
+
                   </Link>
                 </div>
               </div>
@@ -116,10 +116,10 @@ const News = () => {
           </div>
           <div className="bottom_part">
             <div className="left_bot">
-              <Link href="/blog" legacyBehavior={true}>
-                <a className="metaportal_fn_button full">
-                  <span>Read All Articles</span>
-                </a>
+              <Link href="/blog" className="metaportal_fn_button full">
+
+                <span>Read All Articles</span>
+
               </Link>
             </div>
             <div className="right_bot">
