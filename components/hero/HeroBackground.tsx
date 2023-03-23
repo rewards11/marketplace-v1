@@ -23,7 +23,7 @@ const HeroBackground: FC<Props> = ({ banner, children }) => {
         style={{ boxShadow: 'inset 0 0 200px #000000' }}
       >
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="fil_in absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${bannerImage})`,
             filter: 'blur(5px)',

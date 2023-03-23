@@ -20,9 +20,8 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
     twitterUsername: collection?.twitterUsername,
     externalUrl: collection?.externalUrl,
     discordUrl: collection?.discordUrl,
-    blockExplorerUrl: `${
-      envChain?.blockExplorers?.default.url || 'https://etherscan.io'
-    }/address/${collection?.id}`,
+    blockExplorerUrl: `${envChain?.blockExplorers?.default.url || 'https://etherscan.io'
+      }/address/${collection?.id}`,
   }
 
   if (!social.twitterUsername && !social.externalUrl && !social.discordUrl) {
@@ -128,50 +127,63 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
     return (
       <div className="flex gap-4">
         {typeof social.discordUrl === 'string' && (
-          <Link
-            className="flex-none"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={social.discordUrl}
-          >
-            <img
-              src="/icons/Discord.svg"
-              alt="Discord Icon"
-              className="h-6 w-6"
-            />
-          </Link>
+          <span className="cc3 flex justify-center items-center">
+            <Link
+              className="flex-none"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={social.discordUrl}
+            >
+              <img
+                src="/icons/Discord.svg"
+                alt="Discord Icon"
+                className="h-[32px] w-[32px]"
+              />
+            </Link>
+          </span>
+
         )}
         {typeof social.twitterUsername === 'string' && (
-          <Link
-            className="flex-none"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={`https://twitter.com/${social.twitterUsername}`}
-          >
-            <img
-              src="/icons/Twitter.svg"
-              alt="Twitter Icon"
-              className="h-6 w-6"
-            />
-          </Link>
+          <span className="cc3 flex justify-center items-center">
+            <Link
+              className="flex-none"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://twitter.com/${social.twitterUsername}`}
+            >
+              <img
+                src="/icons/Twitter.svg"
+                alt="Twitter Icon"
+                className="h-[32px] w-[32px]"
+              />
+            </Link>
+          </span>
+
         )}
-        <Link
-          className="flex-none text-black dark:text-white"
-          target="_blank"
-          rel="noopener noreferrer"
-          href={social.blockExplorerUrl}
-        >
-          <img src={etherscanLogo} alt="Etherscan Icon" className="h-6 w-6" />
-        </Link>
-        {typeof social.externalUrl === 'string' && (
+        <span className="cc3 flex justify-center items-center">
           <Link
             className="flex-none text-black dark:text-white"
             target="_blank"
             rel="noopener noreferrer"
-            href={social.externalUrl}
+            href={social.blockExplorerUrl}
           >
-            <FiGlobe className="h-6 w-6" />
+            <img src={etherscanLogo} alt="Etherscan Icon" className="h-[32px] w-[32px]" />
           </Link>
+        </span>
+
+
+        {typeof social.externalUrl === 'string' && (
+          <span className="cc3 flex justify-center items-center">
+            <Link
+              className="flex-none text-black dark:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={social.externalUrl}
+            >
+              <FiGlobe className="a1 h-[32px] w-[32px]" />
+            </Link>
+          </span>
+
         )}
       </div>
     )

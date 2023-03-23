@@ -32,7 +32,7 @@ const SortTrendingCollections: FC = () => {
   return (
     <DropdownMenu.Root onOpenChange={setOpen}>
       <DropdownMenu.Trigger
-        className='metaportal_fn_button'
+        className='metaportal_fn_button2'
       //  className="btn-primary-outline w-[228px] justify-between px-4 py-3 dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4"
       >
         <span className="reservoir_fn_button">
@@ -47,7 +47,7 @@ const SortTrendingCollections: FC = () => {
       <DropdownMenu.Content
         align="end"
         sideOffset={12}
-        className="w-48 divide-y-[1px] divide-[#D1D5DB] overflow-hidden rounded-[8px] border-[1px] border-[#D1D5DB] bg-white shadow-md radix-side-bottom:animate-slide-down dark:divide-neutral-600 dark:border-neutral-600 dark:bg-neutral-800 md:w-56"
+        className="reservoir_fn_button2 w-48 bg-[#F3F4F6] divide-y-[1px] divide-[#D1D5DB] overflow-hidden rounded-[8px] border-[1px] border-[#D1D5DB] shadow-md radix-side-bottom:animate-slide-down dark:divide-neutral-600 dark:border-neutral-600 dark:bg-neutral-800 md:w-56"
       >
         {Object.keys(options).map((key) => (
           <DropdownMenu.Item
@@ -57,7 +57,7 @@ const SortTrendingCollections: FC = () => {
               toggleOnItem(router, 'sort', key)
             }}
             disabled={sortSelection === options[key]}
-            className={`reservoir-label-l reservoir-gray-dropdown-item rounded-none hover:bg-neutral-100 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800`}
+            className="reservoir_fn_button2_i text-[#fff] reservoir-label-l rounded-none dark:bg-neutral-900 dark:text-white"
             aria-label={`Sort by ${options[key]}`}
           >
             {options[key]}

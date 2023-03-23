@@ -192,16 +192,16 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
 
   return (
     <>
+      <div style={{ height: 100 }}></div>
       <HeroBackground banner={header.banner}>
-        <div className="z-10 flex w-full flex-col items-center gap-6">
+        <div className="z-10 mt-10 flex w-full flex-col items-center gap-6">
           <img
-            className={`h-20 w-20 rounded-full ${
-              header.image ? 'visible' : 'hidden'
-            }`}
+            className={`h-20 w-20 rounded-full ${header.image ? 'visible' : 'hidden'
+              }`}
             alt={`${header.name} Logo`}
             src={header.image}
           />
-          <h1 className="reservoir-h4 text-center text-black dark:text-white">
+          <h1 className="res-h4 text-center text-black dark:text-white">
             {header.name}
           </h1>
           <HeroSocialLinks
@@ -236,9 +236,8 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                   }}
                 >
                   <FiChevronDown
-                    className={`h-5 w-5 text-black transition-transform dark:text-white ${
-                      descriptionExpanded ? 'rotate-180' : ''
-                    }`}
+                    className={`h-5 w-5 text-black transition-transform dark:text-white ${descriptionExpanded ? 'rotate-180' : ''
+                      }`}
                     aria-hidden
                   />
                 </span>
@@ -250,14 +249,19 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
               <BidModal
                 collectionId={collection?.id}
                 trigger={
-                  <button
-                    disabled={isInTheWrongNetwork}
-                    className="btn-primary-outline min-w-[222px] whitespace-nowrap border border-[#D4D4D4] bg-white text-black dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
-                  >
-                    {isAttributeModal
-                      ? 'Make an Attribute Offer'
-                      : 'Make a Collection Offer'}
-                  </button>
+                  // <div className='metaportal_fn_button'>
+                    // <span className='metaportal_fn_button'>
+                      <button
+                        disabled={isInTheWrongNetwork}
+                        className="metaportal_fn_button btn-primary-outline min-w-[222px] whitespace-nowrap border border-[#D4D4D4] bg-[#2e1558]  text-[#fff] dark:border-[#525252] dark:bg-black dark:text-white dark:ring-[#525252] dark:focus:ring-4"
+                      >
+                        {isAttributeModal
+                          ? 'Make an Attribute Offer'
+                          : 'Make a Collection Offer'}
+                      </button>
+                    // </span>
+                  // </div>
+
                 }
                 attribute={attribute}
                 onBidComplete={() => {
@@ -289,8 +293,8 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
             {!isSmallDevice && (
               <div className="">
                 <DropdownMenu.Root>
-                  <DropdownMenu.Trigger className="btn-primary-outline rounded-lg border border-[#D4D4D4] bg-white p-2 dark:border-[#525252] dark:bg-black dark:ring-[#525252] dark:focus:ring-4">
-                    <FiMoreVertical className="h-6 w-6 dark:text-[#D4D4D4]" />
+                  <DropdownMenu.Trigger className="metaportal_fn_button cursor-pointer btn-primary-outline rounded-lg border border-[#D4D4D4] text-[#fff] bg-[#2e1558]  p-2 dark:border-[#525252] dark:bg-black dark:ring-[#525252] dark:focus:ring-4">
+                    <FiMoreVertical className="h-6 w-6 dark:text-[#fff]" />
                   </DropdownMenu.Trigger>
                   <DropdownMenu.Content
                     sideOffset={4}
