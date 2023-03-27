@@ -44,8 +44,8 @@ const SortTokens: FC = ({}) => {
 
   return (
     <DropdownMenu.Root onOpenChange={setOpen}>
-      <DropdownMenu.Trigger className="btn-primary-outline hidden w-[200px] justify-between px-4 py-3 dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4 xl:flex">
-        <span className="reservoir-label-l dark:text-gray-100">
+      <DropdownMenu.Trigger className="metaportal_fn_button hidden w-[200px] justify-between px-4 py-3 dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4 xl:flex">
+        <span className="reservoir_fn_button text-white dark:text-gray-100 bottom-[10px]">
           {sortSelection}
         </span>
         <FiChevronDown
@@ -58,7 +58,7 @@ const SortTokens: FC = ({}) => {
       <DropdownMenu.Content
         align="end"
         sideOffset={12}
-        className="z-20 w-[200px] divide-y-[1px] divide-[#D1D5DB] overflow-hidden rounded-[8px] border-[1px] border-[#D1D5DB] bg-white shadow-md radix-side-bottom:animate-slide-down dark:divide-neutral-600 dark:border-neutral-600 dark:bg-neutral-800"
+        className="reservoir_fn_button2 z-20 w-[200px] divide-y-[1px] divide-[#D1D5DB] overflow-hidden rounded-[8px] border-[1px] border-[#D1D5DB] bg-[#F3F4F6] shadow-md radix-side-bottom:animate-slide-down dark:divide-neutral-600 dark:border-neutral-600 dark:bg-neutral-800"
       >
         {Object.keys(options).map((key) => (
           <DropdownMenu.Item
@@ -78,7 +78,7 @@ const SortTokens: FC = ({}) => {
                 }
               )
             }}
-            className={`reservoir-label-l reservoir-gray-dropdown-item rounded-none hover:bg-neutral-100 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800`}
+            className={`reservoir_fn_button2_i text-[#fff] reservoir-label-l rounded-none hover:bg-[transparent] dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800`}
             aria-label={`Sort by ${key}`}
           >
             {key}

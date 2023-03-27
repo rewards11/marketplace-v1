@@ -24,7 +24,7 @@ const Sidebar: FC<Props> = ({ attributes, refreshData, scrollToTop }) => {
       type="multiple"
       className="sticky top-[91px] mr-4 hidden max-h-[calc(100vh-+91px)] w-min min-w-[300px] max-w-sm overflow-auto border-r-[1px] border-gray-300 pb-12 dark:border-neutral-600 md:block md:w-1/3 "
     >
-      <div className="border-b-[1px] border-gray-300 px-6 py-5 text-left text-lg font-semibold transition dark:border-neutral-600 dark:text-white">
+      <div className="filter_point border-b-[1px] border-gray-300 px-6 py-5 text-left text-lg font-semibold transition dark:border-neutral-600 text-white">
         Filters
       </div>
       {attributes?.map((attribute) => (
@@ -33,8 +33,8 @@ const Sidebar: FC<Props> = ({ attributes, refreshData, scrollToTop }) => {
           key={attribute.key}
           className="overflow-hidden"
         >
-          <Accordion.Header className="flex w-full justify-between border-b-[1px] border-gray-300 dark:border-neutral-600">
-            <Accordion.Trigger className="flex w-full items-center justify-between p-5 transition hover:bg-primary-100 dark:hover:bg-primary-900">
+          <Accordion.Header className="filter_point flex w-full justify-between border-b-[1px] border-gray-300 dark:border-neutral-600">
+            <Accordion.Trigger className="filter_p1 flex w-full items-center justify-between p-5 transition hover:bg-primary-300 dark:hover:bg-primary-900">
               {attribute.key}
               <StyledChevron className="h-5 w-5" aria-hidden />
             </Accordion.Trigger>

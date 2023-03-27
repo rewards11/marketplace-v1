@@ -18,7 +18,7 @@ const FormatCurrency: FC<Props> = ({
   const value = formatBN(amount, maximumFractionDigits, decimals)
 
   return (
-    <div className="inline-flex flex-none items-center gap-1">
+    <div className="wh_co inline-flex flex-none items-center gap-1">
       {value !== '-' ? children : null}
       <span className="percentage_val flex-grow whitespace-nowrap font-semibold">
         {value as any}

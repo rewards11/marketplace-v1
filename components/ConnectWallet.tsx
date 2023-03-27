@@ -16,6 +16,7 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import useMounted from 'hooks/useMounted'
 import Avatar from './Avatar'
 import { truncateAddress, truncateEns } from 'lib/truncateText'
+import { FaWallet } from 'react-icons/fa'
 
 const DARK_MODE = process.env.NEXT_PUBLIC_DARK_MODE
 const DISABLE_POWERED_BY_RESERVOIR =
@@ -36,14 +37,17 @@ const ConnectWallet: FC = () => {
 
   if (!account.isConnected)
     return (
-      <ConnectWalletButton>
-        <img src="/icons/wallet.svg" alt="Wallet Icon" />
+      <ConnectWalletButton className='reservoir-subtitle-1'>
+        <FaWallet  className="ico_col-wallet-2 h-[18px] w-[18px]" /> 
+        {/* <img src="/icons/wallet.svg" alt="Wallet Icon" /> */}
       </ConnectWalletButton>
     )
 
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger className="btn-primary-outline ml-auto rounded-full border-transparent p-0 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4">
+      <DropdownMenu.Trigger
+       className="ml-auto rounded-full border-transparent p-0 normal-case dark:border-neutral-600 dark:bg-neutral-900 dark:ring-primary-900 dark:focus:ring-4"
+       >
         <Avatar address={account.address} avatar={ensAvatar} size={40} />
       </DropdownMenu.Trigger>
 

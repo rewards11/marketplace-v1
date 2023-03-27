@@ -131,14 +131,14 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           value={router.query?.tab?.toString() || 'items'}
           className="flex w-screen flex-col"
         >
-          <Tabs.List className="flex justify-center border-b border-[#D4D4D4] dark:border-[#525252]">
+          <Tabs.List className="head_top flex justify-center border-[#D4D4D4]">
             {tabs.map(({ name, id }) => (
               <Tabs.Trigger
                 key={id}
                 id={id}
                 value={id}
                 className={
-                  'group reservoir-h6 relative min-w-0 whitespace-nowrap border-b-2 border-transparent py-4 px-8 text-center text-[#525252] hover:text-black focus:z-10 radix-state-active:border-black radix-state-active:text-black dark:text-white dark:radix-state-active:border-white dark:radix-state-active:text-white'
+                  'group reservoir-h6 relative min-w-0 whitespace-nowrap border-b-2 border-[transparent] py-4 px-8 text-center text-[#fff] hover:text-[#cc00ff] focus:z-10 radix-state-active:border-[#fff] radix-state-active:text-[#fff] dark:text-[#000] dark:radix-state-active:border-[#000] dark:radix-state-active:text-[#000]'
                 }
                 onClick={() => toggleOnItem(router, 'tab', id)}
               >
@@ -167,10 +167,10 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                     />
                     {tokenCount > 0 && (
                       <>
-                        <div>{formatNumber(tokenCount)} items</div>
+                        <div className='text-white'>{formatNumber(tokenCount)} items</div>
 
                         <div className="h-9 w-px bg-gray-300 dark:bg-neutral-600"></div>
-                        <div className="flex items-center gap-1">
+                        <div className="text-white flex items-center gap-1">
                           <FormatNativeCrypto
                             amount={
                               stats?.data?.stats?.market?.floorAsk?.price

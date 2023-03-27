@@ -82,12 +82,12 @@ const RefreshButton: FC<Props> = ({ refreshData, isLoading, setIsLoading }) => {
     <div className="min-w-70 inline-flex hidden items-center font-light lg:flex">
       <button
         onClick={() => handleRefreshData()}
-        className="btn-primary-outline mr-2 rounded-full border-none px-2 hover:border disabled:text-neutral-400"
+        className="text-white mr-2 rounded-full border-none px-2 hover:border disabled:text-neutral-400"
         disabled={cooldownEnabled}
       >
         <FiRefreshCcw className="h-5 w-5" />
       </button>
-      <span className="min-w-[140px]">
+      <span className="text-white min-w-[140px]">
         {isLoading ? 'Loading items...' : `Updated ${timeDifference}`}
       </span>
     </div>

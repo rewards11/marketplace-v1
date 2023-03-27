@@ -42,7 +42,7 @@ const Sell: NextPage = () => {
               className="hidden dark:block"
               width={376} height={190}
             />
-            <p className="max-w-[310px] dark:text-white">
+            <p className="max-w-[310px] text-white">
               Connect wallet to accept the best offers from all major
               marketplaces.
             </p>

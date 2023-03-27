@@ -181,7 +181,7 @@ const SearchCollections: FC<Props> = ({
                           setOpen && setOpen(false)
                         }}
 
-                        className={`w-[60%] creative_link flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
+                        className={`w-[100%] creative_link flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
                           ? 'bg-[#F3F4F6] dark:bg-neutral-600'
                           : ''
                           }`}

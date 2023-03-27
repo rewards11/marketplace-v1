@@ -149,6 +149,17 @@ model-viewer {
   top: 14px;
   right: -8px;
 }
+
+.ico_col-wallet{
+	position: absolute;
+	top: 15px;
+    left: -8px;
+}
+.ico_col-wallet-2{
+	position: absolute;
+	top: 14px;
+    left: 20px;
+}
 .sall{
   width: 60% !important;
 }
@@ -573,3 +584,34 @@ model-viewer {
 .fn_cs_collection1 .collection_top1 .item1:nth-child(4){
 	width: 18.8%;
 }
+.head_top{
+	border-bottom: 1px solid rgb(155 140 179);
+}
+.filter_point{
+	border-bottom: 1px solid rgb(155 140 179);
+}
+.filter_p1:hover{
+	color:#cc00ff !important;
+	background-color: #4b2f75 !important;
+}
+.deb_input{
+	border: 1px solid rgb(155 140 179) !important;
+}
+.deb_input:focus{
+	outline: none;
+	background-color: transparent;
+	border-color: var(--mc1) !important;
+}
+.reservoir-subtitle-1{
+	color: #fff !important
+  }
+  .reservoir-subtitle-1{
+	color: #fff !important;
+	background-color:transparent !important
+  }
+  .wh_co{
+	color: white !important;
+  }
+  .hight_tp{
+	height: 100px;
+  }

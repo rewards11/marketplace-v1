@@ -36,7 +36,9 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
     const dropdownItemClasses =
       'reservoir-gray-dropdown-item flex gap-2 rounded-none border-b text-black last:border-b-0 dark:border-[#525252] dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800'
     return (
-      <div className="absolute top-6 right-12">
+      <div
+      //  className="absolute top-6 right-12"
+      >
         <DropdownMenu.Root>
           <DropdownMenu.Trigger className="rounded-lg border bg-white p-2 dark:border-[#525252] dark:bg-black">
             <FiMoreVertical className="h-6 w-6 dark:text-[#D4D4D4]" />
@@ -57,7 +59,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                   <img
                     src="/icons/Discord.svg"
                     alt="Discord Icon"
-                    className="h-6 w-6"
+                    // className="h-6 w-6"
                   />
                   Discord
                 </Link>
@@ -74,7 +76,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                   <img
                     src="/icons/Twitter.svg"
                     alt="Twitter Icon"
-                    className="h-6 w-6"
+                    // className="h-6 w-6"
                   />
                   Twitter
                 </Link>
@@ -103,7 +105,9 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                   rel="noopener noreferrer"
                   href={social.externalUrl}
                 >
-                  <FiGlobe className="h-6 w-6" />
+                  <FiGlobe 
+                  // className="h-6 w-6"
+                   />
                   Website
                 </Link>
               </DropdownMenu.Item>
