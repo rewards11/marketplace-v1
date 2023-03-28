@@ -170,11 +170,11 @@ const CartMenu: FC = () => {
                   <div className="h-14 w-14 overflow-hidden rounded-[4px]">
                     <img src={image || collection?.image} alt="" />
                   </div>
-                  <div>
-                    <div className="reservoir-subtitle">
+                  <div className='leading-normal'>
+                    <div className="reservoir-subtitle text-[#fff]">
                       {name || `#${tokenId}`}
                     </div>
-                    <div className="reservoir-label-s">{collection?.name}</div>
+                    <div className="reservoir-label-s text-[#fff]">{collection?.name}</div>
                     <div className="reservoir-h6">
                       <FormatCrypto
                         amount={price?.amount?.decimal}

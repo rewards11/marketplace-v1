@@ -193,9 +193,10 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                   </div>
                 </div>
                 <div className="z-20 mb-10 flex items-center justify-between">
-                  <div>
-                    <AttributesFlex className="flex flex-wrap gap-3" />
-                  </div>
+                  {/* <div> */}
+                    <AttributesFlex className="flex flex-wrap items-center justify-center  gap-3" />
+
+                  {/* </div> */}
                 </div>
                 <TokensGrid
                   tokens={tokens}

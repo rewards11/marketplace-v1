@@ -32,7 +32,7 @@ const ConnectWalletButton: FC<Props> = ({ className, children }) => {
                 <button 
                   onClick={openConnectModal}
                   type="button"
-                  className={`metaportal_fn_button h-full min-h-[42px] border-none pr-[28px] pl-[28px] dark:border-neutral-600 text-white dark:ring-primary-900 dark:focus:ring-4 ${className}`}
+                  className={`metaportal_fn_button h-full min-h-[45px] border-none pr-[34px] pl-[34px] dark:border-neutral-600 text-white dark:ring-primary-900 dark:focus:ring-4 ${className}`}
                 >
                   {children}
                 </button>
