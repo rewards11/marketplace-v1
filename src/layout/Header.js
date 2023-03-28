@@ -17,7 +17,7 @@ const Header = ({ walletToggle, navigationToggle }) => {
             <div className="trigger" onClick={() => navigationToggle(true)}>
               <span />
             </div>
-            <div className="logo">
+            <div className="logo cursor-pointer">
               <Link href="/">
 
                 <img src="/img/logo.png" alt="" />

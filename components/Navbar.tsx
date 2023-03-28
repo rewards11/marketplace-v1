@@ -121,7 +121,7 @@ const Navbar = ({ }) => {
         <div className="header_in">
           <div className="trigger_logo">
 
-            <div className="logo">
+            <div className="logo cursor-pointer">
               <Link href="https://rewards11.com/" legacyBehavior={true}>
 
                 <img style={{ maxWidth: 40 }} width={40} height={40} src='/rewards11nlogo.png' alt="" />
@@ -133,7 +133,7 @@ const Navbar = ({ }) => {
             <ul>
               <li className="nav_first_child">
                 <Link href="https://rewards11.com/" className="creative_link">
-                  <span>Home</span>
+                  <span className="text-[#fff]">Home</span>
 
                 </Link>
               </li>
@@ -142,7 +142,7 @@ const Navbar = ({ }) => {
                   {externalLinks.map(({ name, url }) => (
                     <Link
                       key={url} href={url} className="creative_link">
-                      <span >{name}</span>
+                      <span className="text-[#fff]">{name}</span>
 
                     </Link>
                   ))}

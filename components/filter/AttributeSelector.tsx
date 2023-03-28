@@ -84,8 +84,8 @@ const AttributeSelector: FC<Props> = ({
               refreshData={refreshData}
               scrollToTop={scrollToTop}
             >
-              <span className="reservoir-body dark:text-white">{value}</span>
-              <span className="reservoir-body dark:text-white">{count}</span>
+              <span className="reservoir-body hover:text-[#cc00ff] text-white">{value}</span>
+              <span className="reservoir-body hover:text-[#cc00ff] text-white">{count}</span>
             </AttributeButton>
           )
         })}

@@ -269,7 +269,7 @@ const TokenCard: FC<Props> = ({
                 mutate={mutate}
                 signer={signer}
                 isInTheWrongNetwork={isInTheWrongNetwork}
-                buttonClassName="btn-primary-fill reservoir-subtitle flex h-[40px] items-center justify-center whitespace-nowrap rounded-none text-white focus:ring-0"
+                buttonClassName="btn-primary-fill bg-[#24102e] reservoir-subtitle flex h-[40px] items-center justify-center whitespace-nowrap rounded-none text-white focus:ring-0"
               />
               {isInCart && (
                 <button
@@ -284,7 +284,7 @@ const TokenCard: FC<Props> = ({
                     newCartTokens.splice(index, 1)
                     setCartTokens(newCartTokens)
                   }}
-                  className="reservoir-subtitle flex h-[40px] items-center justify-center border-t border-neutral-300 text-[#FF3B3B] disabled:cursor-not-allowed dark:border-neutral-600 dark:text-red-300"
+                  className="reservoir-subtitle hover:bg-[#cc00ff] flex h-[40px] items-center justify-center border-t border-neutral-300 text-[#FF3B3B] disabled:cursor-not-allowed dark:border-neutral-600 dark:text-red-300"
                 >
                   Remove
                 </button>
@@ -317,7 +317,7 @@ const TokenCard: FC<Props> = ({
                       }
                     }
                   }}
-                  className="reservoir-subtitle flex h-[40px] items-center justify-center border-t border-neutral-300 disabled:cursor-not-allowed dark:border-neutral-600"
+                  className="reservoir-subtitle hover:text-[#fff] hover:bg-[#cc00ff] flex h-[40px] items-center justify-center border-t border-neutral-300 disabled:cursor-not-allowed dark:border-neutral-600"
                 >
                   Add to Cart
                 </button>

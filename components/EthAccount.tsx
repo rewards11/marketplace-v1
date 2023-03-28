@@ -25,7 +25,7 @@ const EthAccount: FC<Props> = ({
   return (
     <div className="flex items-center gap-2">
       {title && (
-        <p className="reservoir-label-l capitalize text-gray-400 dark:text-white">
+        <p className="reservoir-label-l capitalize text-white">
           {title}
         </p>
       )}
@@ -36,7 +36,7 @@ const EthAccount: FC<Props> = ({
         </div>
       ) : (
         <div
-          className="reservoir-label-l block whitespace-nowrap font-mono dark:text-white"
+          className="reservoir-label-l block whitespace-nowrap font-mono text-white hover:text-[#cc00ff] hover:cursor-pointer"
           title={address}
         >
           {truncateAddress(address || '')}

@@ -22,7 +22,7 @@ const BuyNow: FC<Props> = ({
   data,
   isInTheWrongNetwork,
   signer,
-  buttonClassName = 'btn-primary-fill w-full',
+  buttonClassName = 'btn-primary-fill hover:bg-[#cc00ff] w-full',
   mutate,
 }) => {
   const { switchNetworkAsync } = useSwitchNetwork({
@@ -59,7 +59,7 @@ const BuyNow: FC<Props> = ({
 
   return !canBuy ? (
     <button
-      className={buttonClassName}
+      className={buttonClassName }
       disabled={isInTheWrongNetwork && !switchNetworkAsync}
       onClick={async () => {
         if (isInTheWrongNetwork && switchNetworkAsync && CHAIN_ID) {

@@ -175,7 +175,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
 
   return (
     <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2">
-      <article className="col-span-full rounded-2xl border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
+      <article className="col-span-full rounded-2xl border border-gray-300 bg-[#3f0c5f] p-6 dark:border-neutral-600 dark:bg-black">
         <div className="grid grid-cols-2 gap-6">
           <Price
             title="List Price"
@@ -185,7 +185,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={listSourceRedirect}
-                  className="reservoir-body flex items-center gap-2 dark:text-white"
+                  className="reservoir-body flex items-center gap-2 text-white hover:text-[#cc00ff]"
                 >
                   on {listSourceName}
                   <img
@@ -215,7 +215,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={offerSourceRedirect}
-                  className="reservoir-body flex items-center gap-2 dark:text-white"
+                  className="reservoir-body flex items-center gap-2 text-white hover:text-[#cc00ff]"
                 >
                   on {offerSourceName}
                   <img
@@ -293,7 +293,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
                   showAcceptOffer ? (
                     <button
                       disabled={isInTheWrongNetwork}
-                      className="btn-primary-outline w-full dark:text-white"
+                      className="btn-primary-outline w-full text-white"
                     >
                       Accept Offer
                     </button>
@@ -341,7 +341,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
                   trigger={
                     <button
                       disabled={isInTheWrongNetwork}
-                      className="btn-primary-outline w-full dark:border-neutral-600 dark:text-white dark:ring-primary-900 dark:focus:ring-4"
+                      className="btn-primary-outline w-full dark:border-neutral-600 text-white dark:ring-primary-900 dark:focus:ring-4"
                     >
                       Make Offer
                     </button>
@@ -385,7 +385,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
               newCartTokens.splice(index, 1)
               setCartTokens(newCartTokens)
             }}
-            className="mt-4 w-fit text-left outline-none disabled:cursor-not-allowed  dark:border-neutral-600 dark:focus:ring-4  dark:focus:ring-primary-900"
+            className="mt-4 w-fit text-left outline-none disabled:cursor-not-allowed  dark:border-neutral-600 dark:focus:ring-4  dark:focus:ring-primary-900 text-white hover:text-[#cc00ff]"
           >
             <span>You can also</span>{' '}
             <span className="text-[#FF3B3B] dark:text-[#FF9A9A]">
@@ -423,7 +423,7 @@ const PriceData: FC<Props> = ({ details, collection, isOwner }) => {
             }}
             className="mt-4 w-fit outline-none dark:focus:ring-4 dark:focus:ring-primary-900"
           >
-            <div className="flex items-center dark:text-white">
+            <div className="flex items-center text-white hover:text-[#cc00ff]">
               <div>
                 <span>You can also</span>{' '}
                 <span className="text-primary-700 dark:text-primary-100">
@@ -460,7 +460,7 @@ const Price: FC<{
     </div>
     <div className="reservoir-h3 font-headings dark:text-white">
       {price}
-      <div className="text-sm text-neutral-600 dark:text-neutral-300">
+      <div className="text-sm text-[white] dark:text-neutral-300">
         {formatDollar(usdPrice)}
       </div>
     </div>

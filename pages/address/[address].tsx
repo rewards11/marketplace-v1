@@ -115,7 +115,7 @@ const Address: NextPage<Props> = ({ address, fallback }) => {
   return (
     <Layout navbar={{}}>
       <Head>{metadata.title(`${address} Profile`)}</Head>
-      <div className="col-span-full">
+      <div className="col-span-full pt-[140px]">
         <div className="mt-4 mb-4 w-full px-4 md:px-16">
           <div className="flex">
             {address && (

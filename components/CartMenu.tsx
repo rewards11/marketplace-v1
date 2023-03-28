@@ -125,8 +125,8 @@ const CartMenu: FC = () => {
       <Popover.Trigger>
         <div className="relative z-10 grid h-8 w-8 items-center justify-center rounded-full">
           {cartCount > 0 && (
-            <div 
-            className="absolute flex h-5 w-5 items-center justify-center rounded-full bg-primary-700 text-white"
+            <div
+              className="absolute flex h-5 w-5 items-center justify-center rounded-full bg-primary-700 text-white"
             // className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary-700 text-white"
             >
               {cartCount}
@@ -137,7 +137,7 @@ const CartMenu: FC = () => {
       </Popover.Trigger>
       <StyledContent
         sideOffset={22}
-        className="z-[10000000] w-[367px] rounded-2xl bg-white p-6 shadow-lg dark:border dark:border-neutral-700 dark:bg-neutral-900"
+        className="z-[10000000] w-[367px] rounded-2xl bg-[#130f15] p-6 shadow-lg dark:border dark:border-neutral-700 dark:bg-neutral-900"
       >
         <div className="mb-4 flex justify-between">
           <div className="flex items-center">
@@ -227,7 +227,7 @@ const CartMenu: FC = () => {
             waitingTx ||
             Boolean(balance?.formatted && +balance.formatted < cartTotal)
           }
-          className="btn-primary-fill w-full"
+          className="metaportal_fn_button disabled:cursor-not-allowed disabled:opacity-75 w-full"
         >
           {waitingTx ? 'Waiting' : 'Purchase'}
         </button>

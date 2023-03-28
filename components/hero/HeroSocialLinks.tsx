@@ -131,7 +131,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
     return (
       <div className="flex gap-4">
         {typeof social.discordUrl === 'string' && (
-          <span className="cc3 flex justify-center items-center">
+          <span className="flex justify-center items-center">
             <Link
               className="flex-none"
               target="_blank"
@@ -148,7 +148,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
 
         )}
         {typeof social.twitterUsername === 'string' && (
-          <span className="cc3 flex justify-center items-center">
+          <span className="flex justify-center items-center">
             <Link
               className="flex-none"
               target="_blank"
@@ -164,7 +164,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
           </span>
 
         )}
-        <span className="cc3 flex justify-center items-center">
+        <span className="flex justify-center items-center">
           <Link
             className="flex-none text-black dark:text-white"
             target="_blank"
@@ -177,7 +177,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
 
 
         {typeof social.externalUrl === 'string' && (
-          <span className="cc3 flex justify-center items-center">
+          <span className="flex justify-center items-center">
             <Link
               className="flex-none text-black dark:text-white"
               target="_blank"
