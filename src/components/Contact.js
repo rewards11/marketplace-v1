@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Contact = () => {
   return (
     <section id="contact">
@@ -30,13 +32,13 @@ const Contact = () => {
               <div className="item">
                 <h4 className="label">Phone</h4>
                 <h3>
-                  <a href="tel:+770221770505">+77 022 177 05 05</a>
+                  <Link href="tel:+770221770505">+77 022 177 05 05</Link>
                 </h3>
                 <h4 className="lable">Email</h4>
                 <h3>
-                  <a href="mailto:frenifyteam@gmail.com">
+                  <Link href="mailto:frenifyteam@gmail.com">
                     frenifyteam@gmail.com
-                  </a>
+                  </Link>
                 </h3>
               </div>
             </li>
@@ -97,13 +99,13 @@ const Contact = () => {
                     </p>
                   </label>
                   <div className="mw300">
-                    <a
+                    <Link
                       id="send_message"
                       href="#"
                       className="metaportal_fn_button full"
                     >
                       <span>Send Message</span>
-                    </a>
+                    </Link>
                   </div>
                 </li>
               </ul>

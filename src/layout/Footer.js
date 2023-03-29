@@ -7,13 +7,13 @@ const Footer = () => {
           <div className="left_part">
             <p>
               Copyright 2022 — Designed &amp; Developed by{" "}
-              <a
+              <Link
                 href="https://themeforest.net/user/frenify/portfolio"
                 target="_blank"
                 rel="noreferrer"
               >
                 Frenify
-              </a>
+              </Link>
             </p>
           </div>
           <div className="right_part">

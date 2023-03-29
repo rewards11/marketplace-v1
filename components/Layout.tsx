@@ -50,7 +50,7 @@ const Layout: FC<Props> = ({ children, navbar }) => {
     // </>
 
 
-    <Fragment>
+    <>
       {/* <Head>
         <title>MetaPortal | {pageTitle}</title>
       </Head> */}
@@ -103,7 +103,7 @@ const Layout: FC<Props> = ({ children, navbar }) => {
       <SearchButton />
 
       {/* </div> */}
-    </Fragment>
+    </>
 
 
   )

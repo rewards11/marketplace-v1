@@ -1,4 +1,4 @@
-import { FaTwitter, FaDiscord } from 'react-icons/fa'
+import { FaTwitter, FaDiscord, FaGithub, FaLinkedin, FaYoutube, FaInstagram, FaFacebook } from 'react-icons/fa'
 import Link from 'next/link'
 
 const FOOTER_ENABLED = process.env.NEXT_PUBLIC_FOOTER_ENABLED == 'true'
@@ -18,18 +18,46 @@ const Footer = () => {
               Privacy Policy
             </span>
           </Link>
-          <Link href="https://rewards11.com/policy/" legacyBehavior={true}>
+          <Link href="https://rewards11.com/contactus/" legacyBehavior={true}>
             <span className="foot_link min-w-max" >
-              Terms of Use
+              Contact Us
             </span>
           </Link>
         </div>
         <div className="flex flex-row items-center gap-x-6">
-          <Link href="https://twitter.com/IRewards11/" legacyBehavior={true}>
+        <Link href="https://www.linkedin.com/company/rewards11/" legacyBehavior={true}>
+            <span className="foot_icon" >
+              <FaLinkedin className="h-[20px] w-[25px]" />
+            </span>
+          </Link>
+          <Link href="https://github.com/rewards11/" legacyBehavior={true}>
+            <span className="foot_icon" >
+              <FaGithub className="h-[20px] w-[25px]" />
+            </span>
+          </Link>
+          <Link href="https://www.youtube.com/@inforewards11/" legacyBehavior={true}>
+            <span className="foot_icon" >
+              <FaYoutube className="h-[20px] w-[25px]" />
+            </span>
+          </Link>
+          <Link href="https://www.instagram.com/inforewards_11/" legacyBehavior={true}>
+            <span className="foot_icon" >
+              <FaInstagram className="h-[20px] w-[25px]" />
+            </span>
+          </Link>
+
+          <Link href="https://rewards11.com/website/social/facebook/" legacyBehavior={true}>
+            <span className="foot_icon" >
+              <FaFacebook className="h-[20px] w-[25px]" />
+            </span>
+          </Link>
+
+          <Link href="https://rewards11.com/website/social/twitter/" legacyBehavior={true}>
             <span className="foot_icon" >
               <FaTwitter className="h-[20px] w-[25px]" />
             </span>
           </Link>
+          
           <Link href="https://discord.com/channels/1074945735327485994/1074945735327485997/1080384811962748989/" className="ml-5" legacyBehavior={true}>
             <span className="foot_icon" >
               <FaDiscord className="h-[19px] w-[25px]" />

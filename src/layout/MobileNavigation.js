@@ -15,52 +15,52 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
             <div className="social">
               <ul>
                 <li>
-                  <a
+                  <Link
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Fb.
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="https://www.twitter.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Tw.
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     In.
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Ln.
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="wallet">
-            <a
+            <Link
               href="#"
               className="metaportal_fn_button wallet_opener"
               onClick={() => walletToggle(true)}
             >
               <span>Wallet</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mob_mid">
@@ -81,40 +81,32 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
         <div className="mob_bot" style={{ display: toggle ? "block" : "none" }}>
           <ul>
             <li>
-              <a className="creative_link" href="http://rewards11.com">
+              <Link className="creative_link" href="http://rewards11.com">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="creative_link" href="/">
+              <Link className="creative_link" href="/">
                 Discover
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="creative_link" href="/sell">
+              <Link className="creative_link" href="/sell">
                 Sell
-              </a>
+              </Link>
             </li>
 
-            {/* <li>
-              <a className="creative_link" href="#collection">
-                Collection
-              </a>
-            </li> */}
+           
             <li>
-              <a className="creative_link" href="https://rewards11.com/blog">
+              <Link className="creative_link" href="https://rewards11.com/blog">
                 Blog
-              </a>
+              </Link>
             </li>
-            {/* <li>
-              <a className="creative_link" href="#contact">
-                Contact
-              </a>
-            </li> */}
+           
             <li>
-              <a className="creative_link" href="https://rewards11.com/company">
+              <Link className="creative_link" href="https://rewards11.com/company">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

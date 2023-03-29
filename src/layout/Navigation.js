@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Fragment, useState } from "react";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import { connect } from "react-redux";
 import { navigationToggle } from "../redux/actions/siteSettings";
 const Navigation = ({ navigation, navigationToggle }) => {
@@ -11,19 +13,19 @@ const Navigation = ({ navigation, navigationToggle }) => {
         className={`metaportal_fn_leftnav_closer ${navigation ? "active" : ""}`}
       />
       <div className={`metaportal_fn_leftnav ${navigation ? "active" : ""}`}>
-        <a
+        <Link
           href="#"
           className="fn__closer"
           onClick={() => navigationToggle(false)}
         >
           <span />
-        </a>
+        </Link>
         <div className="navbox">
           <div className="list_holder">
             <ul className="metaportal_fn_items">
               <li>
                 <div className="item">
-                  <a
+                  <Link
                     href="https://opensea.io/"
                     target="_blank"
                     rel="noreferrer"
@@ -36,7 +38,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
               </li>
               <li>
                 <div className="item">
-                  <a
+                  <Link
                     href="https://discord.com/"
                     target="_blank"
                     rel="noreferrer"
@@ -56,260 +58,103 @@ const Navigation = ({ navigation, navigationToggle }) => {
             </span>
             {/* For JS */}
             <ul
-              style={{
-                transform: `translateX(${subMenu !== null ? "-100" : "0"}%)`,
-              }}
+            // style={{}}
             >
+
               <li>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setSubMenu("home");
-                  }}
-                  className={`${subMenu == "home" ? "active" : ""}`}
-                >
-                  <span className="creative_link">
-                    Home
-                    <img src="/svg/down.svg" alt="" className="fn__svg" />
-                  </span>
-                </a>
-                <ul className="sub-menu">
-                  <li>
-                    <a
-                      href="#"
-                      className="prev"
-                      onClick={() => setSubMenu(null)}
-                    >
-                      <span className="creative_link">
-                        <img src="/svg/down.svg" alt="" className="fn__svg" />
-                        Home
-                      </span>
-                    </a>
-                  </li>
+                <Link href="https://rewards11.com/" onClick={() => navigationToggle(false)}>
 
-                  <li>
-                    <Link href="/" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">#1 3D Carousel</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-2" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">
-                        #2 Bended Carousel
-                      </span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-3" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">
-                        #3 Video Background
-                      </span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-4" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">#4 Water Effect</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-5" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">
-                        #5 Simple Carousel
-                      </span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-6" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">
-                        #6 Fullscreen Slider
-                      </span>
-
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/nft/1" onClick={() => navigationToggle(false)}>
-
-                  <span className="creative_link">Mint Page</span>
+                  <span className="creative_link">Home</span>
 
                 </Link>
               </li>
+
               <li>
-                <Link href="/collection" onClick={() => navigationToggle(false)}>
+                <Link href="/" onClick={() => navigationToggle(false)}>
 
                   <span className="creative_link">Collection</span>
 
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setSubMenu("pages");
-                  }}
-                  className={`${subMenu == "pages" ? "active" : ""}`}
-                >
-                  <span className="creative_link">
-                    Pages
-                    <img src="/svg/down.svg" alt="" className="fn__svg" />
-                  </span>
-                </a>
-                <ul className="sub-menu">
-                  <li>
-                    <a
-                      href="#"
-                      className="prev"
-                      onClick={() => setSubMenu(null)}
-                    >
-                      <span className="creative_link">
-                        <img src="/svg/down.svg" alt="" className="fn__svg" />
-                        Pages
-                      </span>
-                    </a>
-                  </li>
+                <Link href="/sell" onClick={() => navigationToggle(false)}>
 
-                  <li>
-                    <Link href="/coming-soon" onClick={() => navigationToggle(false)}>
+                  <span className="creative_link">Sell</span>
 
-                      <span className="creative_link">Coming Soon</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/404" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">404 Page</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/protected" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">Protected Page</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/no-results" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">Search No Results</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/cookies" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">Cookies</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/policy" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">Privacy Policy</span>
-
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/terms-conditions" onClick={() => navigationToggle(false)}>
-
-                      <span className="creative_link">
-                        Terms &amp; Conditions
-                      </span>
-
-                    </Link>
-                  </li>
-                </ul>
+                </Link>
               </li>
+
               <li>
-                <Link href="/blog" onClick={() => navigationToggle(false)}>
+                <Link href="http://rewards11.com/blog" onClick={() => navigationToggle(false)}>
 
                   <span className="creative_link">Blog</span>
 
                 </Link>
               </li>
-              <li>
-                <Link href="/blog-single" onClick={() => navigationToggle(false)}>
 
-                  <span className="creative_link">Blog Single</span>
-
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="info_holder">
-            <div className="copyright">
-              <p>
-                Copyright 2022 - Designed &amp; Developed by{" "}
-                <a
-                  href="https://themeforest.net/user/codeefly/portfolio"
+            <div className="copyright flex justify-center items-center">
+              {/* <p> */}
+
+                <Link
+                  href="https://rewards11.com/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  CodeeFly
-                </a>
-              </p>
+                  <Image src="/rewards11nlogo.png" alt="" width={40} height={40} />
+                  {/* Rewards11 */}
+                </Link>
+              {/* </p> */}
             </div>
             <div className="social_icons">
               <ul>
+
+
+
                 <li>
-                  <a href="#">
-                    <img
-                      src="/svg/social/twitter-1.svg"
-                      alt=""
-                      className="fn__svg"
-                    />
-                  </a>
+                  <Link href="https://rewards11.com/website/social/twitter">
+                    <FaTwitter className="h-[20px] w-[25px]" />
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <img
-                      src="/svg/social/facebook-1.svg"
-                      alt=""
-                      className="fn__svg"
-                    />
-                  </a>
+                  <Link href="https://rewards11.com/website/social/facebook">
+                    <FaFacebook className="h-[20px] w-[25px]" />
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <img
-                      src="/svg/social/instagram-1.svg"
-                      alt=""
-                      className="fn__svg"
-                    />
-                  </a>
+                  <Link href="https://www.instagram.com/inforewards_11">
+                    <FaInstagram className="h-[20px] w-[25px]" />
+                  </Link>
                 </li>
+
+
+
                 <li>
-                  <a href="#">
-                    <img
+                  <Link href="https://www.linkedin.com/company/rewards11/">
+                    {/* <img
                       src="/svg/social/pinterest-1.svg"
                       alt=""
                       className="fn__svg"
-                    />
-                  </a>
+                    /> */}
+                    <FaLinkedin className="h-[20px] w-[25px]" />
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <img
+                  <Link href="https://github.com/rewards11/">
+                    {/* <img
                       src="/svg/social/behance-1.svg"
                       alt=""
                       className="fn__svg"
-                    />
-                  </a>
+                    /> */}
+                    <FaGithub className="h-[20px] w-[25px]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.youtube.com/@inforewards11/">
+                    <FaYoutube className="h-[20px] w-[25px]" />
+                  </Link>
                 </li>
               </ul>
             </div>
