@@ -34,19 +34,19 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
 
   if (isSmallDevice) {
     const dropdownItemClasses =
-      'reservoir-gray-dropdown-item flex gap-2 rounded-none border-b text-black last:border-b-0 dark:border-[#525252] dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800'
+      'creative_link reservoir-gray-dropdown-item flex gap-2 rounded-none border-b text-white last:border-b-0 dark:border-[#525252] dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800'
     return (
       <div
       //  className="absolute top-6 right-12"
       >
         <DropdownMenu.Root>
-          <DropdownMenu.Trigger className="rounded-lg border bg-white p-2 dark:border-[#525252] dark:bg-black">
-            <FiMoreVertical className="h-6 w-6 dark:text-[#D4D4D4]" />
+          <DropdownMenu.Trigger className="metaportal_fn_button bg-[#2e1558] rounded-lg border p-2 dark:border-[#525252] dark:bg-black">
+            <FiMoreVertical className="h-6 w-6 text-[#fff]" />
           </DropdownMenu.Trigger>
           <DropdownMenu.Content
             sideOffset={8}
             align="end"
-            className="min-w-[172px] overflow-hidden rounded-lg border bg-white shadow-md radix-side-bottom:animate-slide-down dark:border-[#525252] dark:bg-neutral-900 md:max-w-[422px]"
+            className="min-w-[172px] z-[1000] overflow-hidden rounded-lg border bg-[#290d52] shadow-md radix-side-bottom:animate-slide-down dark:border-[#525252] dark:bg-neutral-900 md:max-w-[422px]"
           >
             {typeof social.discordUrl === 'string' && (
               <DropdownMenu.Item asChild>
@@ -59,7 +59,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                   <img
                     src="/icons/Discord.svg"
                     alt="Discord Icon"
-                    // className="h-6 w-6"
+                    className="h-6 w-6"
                   />
                   Discord
                 </Link>
@@ -76,7 +76,7 @@ const HeroSocialLinks: FC<Props> = ({ refreshCollection, collection }) => {
                   <img
                     src="/icons/Twitter.svg"
                     alt="Twitter Icon"
-                    // className="h-6 w-6"
+                    className="h-6 w-6"
                   />
                   Twitter
                 </Link>

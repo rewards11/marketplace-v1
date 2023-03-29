@@ -192,7 +192,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
 
   return (
     <>
-      <div style={{ height: 100 }}></div>
+      <div className="hero_height_res"></div>
       <HeroBackground banner={header.banner}>
         <div className="z-10 mt-10 flex w-full flex-col items-center gap-6">
           <img

@@ -238,7 +238,7 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
   if (!signer) {
     return (
       <button
-        className="metaportal_fn_button flex justify-center items-center gap-2 dark:ring-primary-900 dark:focus:ring-4"
+        className="metaportal_fn_button bg-[#2e1558] rounded-[10px] flex justify-center items-center gap-2 dark:ring-primary-900 dark:focus:ring-4"
         onClick={() => {
           if (openConnectModal) {
             openConnectModal()
@@ -260,7 +260,7 @@ const Sweep: FC<Props> = ({ tokens, collection, mutate, setToast }) => {
           isInTheWrongNetwork ||
           sweepTokens?.length === 0
         }
-        className="metaportal_fn_button flex justify-center items-center gap-2 dark:ring-primary-900 dark:focus:ring-4"
+        className="metaportal_fn_button bg-[#2e1558] rounded-[10px] flex justify-center items-center gap-2 dark:ring-primary-900 dark:focus:ring-4"
       >
         <FaBroom className="text-white" />
         Sweep

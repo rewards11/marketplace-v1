@@ -615,6 +615,14 @@ model-viewer {
   .hight_tp{
 	height: 100px;
   }
+  .hero_height_res{
+	height: 100px;
+  }
+  @media(max-width: 1040px){
+	.hero_height_res{
+		height: 0px;
+	  }
+  }
 .data_items{
 	border: 1px solid rgba(255,255,255,.15);
     border-radius: 10px;
@@ -681,3 +689,14 @@ model-viewer {
 	overflow: hidden;
 	color:#fff;
 }
+@media(max-width: 500px){
+	.cc1:after{
+		border: none;
+	  }
+  }
+  @media(max-width: 500px){
+	.scrll_btm{
+       padding-bottom: 42px;
+	}
+  }
+ 

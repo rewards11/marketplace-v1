@@ -65,9 +65,9 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
         </div>
         <div className="mob_mid">
           <div className="logo">
-            <Link href="/">
+            <Link href="http://rewards11.com">
 
-              <img src="/img/logo.png" alt="" />
+              <img src="/rewards11nlogo.png" alt="" width={40} height={40} />
 
             </Link>
           </div>
@@ -81,28 +81,39 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
         <div className="mob_bot" style={{ display: toggle ? "block" : "none" }}>
           <ul>
             <li>
-              <a className="creative_link" href="#home">
+              <a className="creative_link" href="http://rewards11.com">
                 Home
               </a>
             </li>
             <li>
-              <a className="creative_link" href="#about">
-                About
+              <a className="creative_link" href="/">
+                Discover
               </a>
             </li>
             <li>
+              <a className="creative_link" href="/sell">
+                Sell
+              </a>
+            </li>
+
+            {/* <li>
               <a className="creative_link" href="#collection">
                 Collection
               </a>
-            </li>
+            </li> */}
             <li>
-              <a className="creative_link" href="#news">
+              <a className="creative_link" href="https://rewards11.com/blog">
                 Blog
               </a>
             </li>
-            <li>
+            {/* <li>
               <a className="creative_link" href="#contact">
                 Contact
+              </a>
+            </li> */}
+            <li>
+              <a className="creative_link" href="https://rewards11.com/company">
+                About
               </a>
             </li>
           </ul>

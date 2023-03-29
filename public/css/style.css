@@ -415,10 +415,10 @@ a.full_link{
 	display: flex;
 	padding: 20px;
 	overflow: hidden;
-	background: rgb(27,18,29);
-    background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
-    background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
+	background: rgb(27,18,29) !important;
+    background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%) !important;
+    background: -webkit-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%) !important;
+    background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%) !important;
 	border-bottom: 1px solid rgba(255,255,255,.08);
 	-ms-align-items: center;
 	align-items: center;
