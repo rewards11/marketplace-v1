@@ -12,7 +12,7 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
             <div className="trigger" onClick={() => navigationToggle(true)}>
               <span />
             </div>
-            <div className="social">
+            {/* <div className="social">
               <ul>
                 <li>
                   <Link
@@ -51,7 +51,7 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="wallet">
             <Link

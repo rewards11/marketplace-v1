@@ -114,7 +114,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
 
 
                 <li>
-                  <Link href="https://rewards11.com/website/social/twitter">
+                  <Link href="https://rewards11.com/website/social/twitter" target={"_blank"}>
                     <FaTwitter className="h-[20px] w-[25px]" />
                   </Link>
                 </li>

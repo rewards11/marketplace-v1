@@ -30,7 +30,7 @@ const Layout: FC<Props> = ({ children, navbar }) => {
 
 
   useEffect(() => {
-    holdSection();
+    // holdSection();
     imgToSVG();
     dataBgImg();
   }, []);

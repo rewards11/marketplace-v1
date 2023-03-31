@@ -223,7 +223,7 @@ body:after{
 	position: fixed;
 	width: 270px;
 	height: 270px;
-	top: 42.8%; /* 463px */
+	top: 52.8%; /* 463px */
 	right: 25%; /* 487px */
 	background-color: var(--mc2);
 	border-radius: 100%;
@@ -236,8 +236,8 @@ body:before{
 	position: fixed;
 	width: 270px;
 	height: 270px;
-	top: 27.5%; /* 297px */
-	left: 23.9%; /* 479px */
+	top: 52.5%; /* 297px */
+	left: 28.9%; /* 479px */
 	background-color: var(--mc1);
 	border-radius: 100%;
 	-webkit-filter: blur(150px);
@@ -927,6 +927,11 @@ a.full_link{
 	display: flex;
 	padding: 0px 40px;
 	justify-content: space-between;
+}
+@media(max-width: 1235px){
+	.header .nav ul{
+		padding: 0px 20px;
+	}
 }
 .header .nav li{
 	margin: 0;
@@ -5601,9 +5606,13 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 		text-align: left;
 	}
 	.metaportal_fn_leftnav .social_icons ul{
-		justify-content: flex-start;
+		justify-content: center;
 	}
-	.fn__closer{display: block;}
+	.fn__closer{
+		display: block;
+		top: 15px;
+		right: 15px;
+	}
 	.metaportal_fn_leftnav,
 	.metaportal_fn_items .item,
 	.metaportal_fn_walletbox{

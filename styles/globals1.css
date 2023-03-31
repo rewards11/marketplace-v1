@@ -29,7 +29,7 @@ table th{
 color:#000	
 }
 .fil_in{
-	filter: invert(100%) hue-rotate(180deg) brightness(150%) !important;
+	filter: 5px !important;
 }
 .per_val {
   color: #fff;
@@ -699,4 +699,33 @@ model-viewer {
        padding-bottom: 42px;
 	}
   }
- 
+ /* Parent Container */
+.logo {
+	position: relative;
+  }
+  
+/* Child Text Container */
+.logo div{
+    position: absolute;
+    bottom: 20;
+    right: 20;
+    color: white;
+    margin-bottom: 5px;
+	font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.logo:hover{
+    cursor: pointer;
+}
+
+.logo:hover div{
+    width: 60px;
+    padding: 4px 4px;
+    visibility: visible;
+    opacity: 0.7; 
+}

@@ -119,24 +119,25 @@ const Navbar = ({ }) => {
     <header id="header">
       <div className="header">
         <div className="header_in">
-          <div className="trigger_logo">
+          <div className="trigger_logo cursor-pointer">
 
             <div className="logo cursor-pointer">
-              <Link href="https://rewards11.com/" legacyBehavior={true}>
+              <Link href="https://rewards11.com/" legacyBehavior={true} target="_blank" rel="noreferrer">
 
                 <img style={{ maxWidth: 40 }} width={40} height={40} src='/rewards11nlogo.png' alt="" />
-
+               
               </Link>
+              <div>Home</div>
             </div>
           </div>
           <div className="nav" style={{ opacity: 1 }}>
             <ul>
-              <li className="nav_first_child">
+              {/* <li className="nav_first_child">
                 <Link href="https://rewards11.com/" className="creative_link">
                   <span className="text-[#fff]">Home</span>
 
                 </Link>
-              </li>
+              </li> */}
               {showLinks && (
                 <li className="nav_second_child">
                   {externalLinks.map(({ name, url }) => (
