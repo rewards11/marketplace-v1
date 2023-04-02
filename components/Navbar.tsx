@@ -124,10 +124,10 @@ const Navbar = ({ }) => {
             <div className="logo cursor-pointer">
               <Link href="https://rewards11.com/" legacyBehavior={true} target="_blank" rel="noreferrer">
 
-                <img style={{ maxWidth: 40 }} width={40} height={40} src='/rewards11nlogo.png' alt="" />
+                <img style={{ maxWidth: 60 }} width={60} height={60} src='/rewards11nlogo.png' alt="" />
                
               </Link>
-              <div>Home</div>
+              <div className="title_logos">Home</div>
             </div>
           </div>
           <div className="nav" style={{ opacity: 1 }}>

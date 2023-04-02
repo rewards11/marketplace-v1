@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { navigationToggle, walletToggle } from "../redux/actions/siteSettings";
+import SearchMenu from "components/SearchMenu";
 const MobileNavigation = ({ walletToggle, navigationToggle }) => {
   const [toggle, setToggle] = useState(false);
   return (
@@ -11,6 +12,14 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
           <div className="social_trigger">
             <div className="trigger" onClick={() => navigationToggle(true)}>
               <span />
+            </div>
+
+            <div className="logo">
+              <Link href="http://rewards11.com">
+
+                <img src="/rewards11nlogo.png" alt="" width={50} height={50} />
+
+              </Link>
             </div>
             {/* <div className="social">
               <ul>
@@ -53,7 +62,9 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
               </ul>
             </div> */}
           </div>
-          <div className="wallet">
+          
+          <div className="wallet flex flex-[0.25] justify-between">
+          <SearchMenu style={{color: '#fff'}} />
             <Link
               href="#"
               className="metaportal_fn_button wallet_opener"
@@ -63,7 +74,7 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
             </Link>
           </div>
         </div>
-        <div className="mob_mid">
+        {/* <div className="mob_mid">
           <div className="logo">
             <Link href="http://rewards11.com">
 
@@ -77,7 +88,7 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
           >
             <span />
           </div>
-        </div>
+        </div> */}
         <div className="mob_bot" style={{ display: toggle ? "block" : "none" }}>
           <ul>
             <li>
@@ -96,13 +107,13 @@ const MobileNavigation = ({ walletToggle, navigationToggle }) => {
               </Link>
             </li>
 
-           
+
             <li>
               <Link className="creative_link" href="https://rewards11.com/blog">
                 Blog
               </Link>
             </li>
-           
+
             <li>
               <Link className="creative_link" href="https://rewards11.com/company">
                 About

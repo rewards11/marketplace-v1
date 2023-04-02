@@ -705,13 +705,13 @@ model-viewer {
   }
   
 /* Child Text Container */
-.logo div{
+.logo .title_logos{
     position: absolute;
     bottom: 20;
-    right: 20;
+    right: 10;
     color: white;
     margin-bottom: 5px;
-	font-size: 12px;
+	font-size: 10px;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: visibility 0s, opacity 0.5s linear; 
@@ -723,9 +723,10 @@ model-viewer {
     cursor: pointer;
 }
 
-.logo:hover div{
+.logo:hover .title_logos{
     width: 60px;
     padding: 4px 4px;
     visibility: visible;
     opacity: 0.7; 
+	text-align: center;
 }

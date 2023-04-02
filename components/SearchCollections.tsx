@@ -126,7 +126,7 @@ const SearchCollections: FC<Props> = ({
             tabIndex={isMobile ? 1 : -1}
             className={
               isMobile
-                ? 'ml-[72px] h-[72px] w-full outline-none dark:bg-black'
+                ? 'ml-[16px] mr-[16px] h-[72px] w-[100%] outline-none dark:bg-black'
                 : `reservoir-label-l input-primary-outline w-full pl-9 pr-9 dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:ring-primary-900 dark:placeholder:text-neutral-400  dark:focus:ring-4 lg:w-[447px]`
             }
             placeholder="Search for a collection"
@@ -142,7 +142,7 @@ const SearchCollections: FC<Props> = ({
               <FiXCircle
                 className={
                   isMobile
-                    ? 'absolute right-[24px] top-[27px]'
+                    ? 'absolute right-[10px] top-[16px]'
                     : 'absolute top-1/2 right-3 z-20 h-4 w-4 -translate-y-1/2 text-[#9CA3AF]'
                 }
               />
@@ -155,7 +155,7 @@ const SearchCollections: FC<Props> = ({
             initialResults?.collections.length > 0 && (
               <div
                 className={`sall w-[60%] divide-y-[1px] divide-[#D1D5DB] overflow-hidden  border-[#D1D5DB]  dark:divide-neutral-600 dark:border-neutral-600 pl-8 pr-8 bg-[#290d52]  ${isMobile
-                  ? 'top-[72px] border-y dark:bg-black'
+                  ? 'top-[72px] text-white bg-[#1b0f39] border-y dark:bg-black'
                   : '`w-[60%] absolute top-[50px] z-10 w-full rounded-[8px] border dark:bg-neutral-900'
                   }`}
                 {...getMenuProps()}
@@ -205,7 +205,7 @@ const SearchCollections: FC<Props> = ({
           {(focused || isOpen) && inputValue !== '' && isEmpty && (
             <div 
               className={`sall w-[60%] absolute bg-[#290d52] z-10 divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#fff] dark:divide-neutral-600 dark:border-neutral-600 pl-9 pr-9 pt-3 pb-3  border-b-2 ${isMobile
-                ? 'top-[72px] border-y dark:bg-black'
+                ? 'top-[72px] text-white bg-[#1b0f39] border-y dark:bg-black'
                 : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
                 }`}
               {...getMenuProps()}
@@ -216,7 +216,7 @@ const SearchCollections: FC<Props> = ({
           {(focused || isOpen) && inputValue !== '' && !isEmpty && (
             <div
               className={`sall w-[60%] absolute z-10 divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
-                ? 'top-[72px] border-y dark:bg-black'
+                ? 'top-[72px] text-white bg-[#1b0f39] border-y dark:bg-black'
                 : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
                 }`}
               {...getMenuProps()}
