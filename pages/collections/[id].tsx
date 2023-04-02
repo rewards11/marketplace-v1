@@ -53,6 +53,7 @@ const COLLECTION_SET_ID = process.env.NEXT_PUBLIC_COLLECTION_SET_ID
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const Home: NextPage<Props> = ({ fallback, id }) => {
+  const [toggle, setToggle] = useState(true);
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const scrollRef = useRef<HTMLDivElement | null>(null)
@@ -131,7 +132,108 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           value={router.query?.tab?.toString() || 'items'}
           className="flex w-screen flex-col"
         >
-          <Tabs.List className="head_top flex justify-center border-[#D4D4D4]">
+          {/* {router.query?.tab?.toString()=="items" ?
+          <div className='toggl_manu'>
+          <div className='trigger_head'>
+            <div
+              className={`trigger ${toggle ? "active" : ""}`}
+              onClick={() => setToggle(!toggle)}
+            >
+              <span />
+            </div>
+          </div>
+        :
+        null
+        } */}
+          <div className='toggl_manu'>
+            <div className='trigger_head'>
+              {/* {tabs[0].name == 'items' ?
+                <div
+                  className={`trigger ${toggle ? "active" : ""}`}
+                  onClick={() => setToggle(!toggle)}
+                >
+                  <span />
+                </div>
+                :
+                null
+              } */}
+              {router.query?.tab?.toString() === 'items' ?
+                <div
+                  className={`trigger ${toggle ? "active" : ""}`}
+                  onClick={() => setToggle(!toggle)}
+                >
+                  <span />
+                </div>
+                :
+                null
+              }
+
+              {/* {router.query?.tab?.toString() === 'items' ?
+                <div className='trigger_head_1'>
+                  <MobileTokensFilter
+                    attributes={attributes}
+                    refreshData={() => {
+                      tokens.setSize(1)
+                    }}
+                    scrollToTop={scrollToTop}
+                  />
+                </div>
+                :
+                null
+              } */}
+            </div>
+
+            {router.query?.tab?.toString() === 'items' ?
+              <div className='trigger_head_1'>
+                <MobileTokensFilter
+                  attributes={attributes}
+                  refreshData={() => {
+                    tokens.setSize(1)
+                  }}
+                  scrollToTop={scrollToTop}
+                />
+              </div>
+              :
+              <div className='wid_dynmic'>
+                <div></div>
+              </div>
+            }
+
+
+
+
+            <Tabs.List className="head_top flex justify-center border-[#D4D4D4]">
+              {tabs.map(({ name, id }) => (
+                // <div>
+
+                <Tabs.Trigger
+                  key={id}
+                  id={id}
+                  value={id}
+                  className={
+                    'group reservoir-h6 relative min-w-0 whitespace-nowrap border-b-2 border-[transparent] py-4 px-8 text-center text-[#fff] hover:text-[#cc00ff] focus:z-10 radix-state-active:border-[#fff] radix-state-active:text-[#fff] dark:text-[#000] dark:radix-state-active:border-[#000] dark:radix-state-active:text-[#000]'
+                  }
+                  onClick={() => toggleOnItem(router, 'tab', id)}
+                >
+                  <span>{name}</span>
+                </Tabs.Trigger>
+                //   {/* {router.query?.tab?.toString() === 'items' ?
+                //     <div
+                //       className={`trigger ${toggle ? "active" : ""}`}
+                //       onClick={() => setToggle(!toggle)}
+                //     >
+                //       <span />
+                //     </div>
+                //     :
+                //     null
+                //   } */}
+                // // </div>
+
+              ))}
+            </Tabs.List>
+          </div>
+
+          {/* <Tabs.List className="head_top flex justify-center border-[#D4D4D4]">
             {tabs.map(({ name, id }) => (
               <Tabs.Trigger
                 key={id}
@@ -145,16 +247,27 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                 <span>{name}</span>
               </Tabs.Trigger>
             ))}
-          </Tabs.List>
+          </Tabs.List> */}
           <Tabs.Content value="items" asChild>
             <div ref={scrollRef} className="relative flex flex-row">
-              <Sidebar
+              {toggle == true ?
+                <Sidebar
+                  attributes={attributes}
+                  refreshData={() => {
+                    tokens.setSize(1)
+                  }}
+                  scrollToTop={scrollToTop}
+                />
+                :
+                null
+              }
+              {/* <Sidebar
                 attributes={attributes}
                 refreshData={() => {
                   tokens.setSize(1)
                 }}
                 scrollToTop={scrollToTop}
-              />
+              /> */}
               <div className="mx-6 mt-4 w-full">
                 <div className="mb-4 hidden items-center justify-between md:flex">
                   <div className="flex items-center gap-6 font-semibold">
@@ -193,10 +306,9 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                   </div>
                 </div>
                 <div className="z-20 mb-10 flex items-center justify-between">
-                  {/* <div> */}
-                    <AttributesFlex className="flex flex-wrap items-center justify-center  gap-3" />
 
-                  {/* </div> */}
+                  <AttributesFlex className="flex flex-wrap items-center justify-center  gap-3" />
+
                 </div>
                 <TokensGrid
                   tokens={tokens}
@@ -207,13 +319,13 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
                   isLoading={isLoading}
                 />
               </div>
-              <MobileTokensFilter
+              {/* <MobileTokensFilter
                 attributes={attributes}
                 refreshData={() => {
                   tokens.setSize(1)
                 }}
                 scrollToTop={scrollToTop}
-              />
+              /> */}
             </div>
           </Tabs.Content>
           <Tabs.Content
@@ -312,11 +424,11 @@ export const getStaticProps: GetStaticProps<{
   const collectionUrl = new URL(`${RESERVOIR_API_BASE}/collections/v5`)
 
   let collectionQuery: paths['/collections/v5']['get']['parameters']['query'] =
-    {
-      id,
-      includeTopBid: true,
-      normalizeRoyalties: true,
-    }
+  {
+    id,
+    includeTopBid: true,
+    normalizeRoyalties: true,
+  }
 
   setParams(collectionUrl, collectionQuery)
 
