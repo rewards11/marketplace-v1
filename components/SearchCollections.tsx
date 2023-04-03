@@ -182,7 +182,7 @@ const SearchCollections: FC<Props> = ({
                         }}
 
                         className={`w-[100%] creative_link flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
-                          ? 'bg-[#F3F4F6] dark:bg-neutral-600'
+                          ? 'bg-[#1b0f39] dark:bg-neutral-600'
                           : ''
                           }`}
                       >
@@ -215,7 +215,7 @@ const SearchCollections: FC<Props> = ({
           )}
           {(focused || isOpen) && inputValue !== '' && !isEmpty && (
             <div
-              className={`sall w-[60%] absolute z-10 divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-white dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
+              className={`sall w-[60%] absolute z-10 divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[#D1D5DB] bg-[#1b0f39] dark:divide-neutral-600 dark:border-neutral-600 ${isMobile
                 ? 'top-[72px] text-white bg-[#1b0f39] border-y dark:bg-black'
                 : 'top-[50px] rounded-[8px] border dark:bg-neutral-900'
                 }`}
@@ -239,8 +239,8 @@ const SearchCollections: FC<Props> = ({
                       setFocused(false)
                       setOpen && setOpen(false)
                     }}
-                    className={`creative_link flex items-center py-4 px-6 hover:bg-[#F3F4F6] dark:hover:bg-neutral-600 ${highlightedIndex === index
-                      ? 'bg-[#F3F4F6] dark:bg-neutral-600'
+                    className={`creative_link flex items-center py-4 px-6 hover:bg-[#1b0f39] dark:hover:bg-neutral-600 ${highlightedIndex === index
+                      ? 'bg-[#1b0f39] dark:bg-neutral-600'
                       : ''
                       }`}
                   >
@@ -251,7 +251,7 @@ const SearchCollections: FC<Props> = ({
                       alt={`${collection?.name}'s logo.`}
                       className="h-9 w-9 shrink-0 overflow-hidden rounded-full"
                     />
-                    <span className="reservoir-subtitle ml-2 overflow-hidden text-ellipsis dark:text-white">
+                    <span className="reservoir-subtitle ml-2 overflow-hidden text-ellipsis text-white">
                       {collection?.name}
                     </span>
                   </span>
