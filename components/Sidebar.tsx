@@ -18,23 +18,14 @@ type Props = {
 
 const Sidebar: FC<Props> = ({ attributes, refreshData, scrollToTop }) => {
   if (attributes && attributes.length === 0) return null
-  const [toggle, setToggle] = useState(false);
   return (
     <Accordion.Root
       type="multiple"
       className="sticky top-[91px] mr-4 hidden max-h-[calc(100vh-+91px)] w-min min-w-[300px] max-w-sm overflow-auto border-r-[1px] border-gray-300 pb-12 dark:border-neutral-600 md:block md:w-1/3 "
     >
-      {/* <div className='toggl_filtr'> */}
-        <div className="filter_point border-b-[1px] border-gray-300 px-6 py-5 text-left text-lg font-semibold transition dark:border-neutral-600 text-white">
-          Filters
-        </div>
-        {/* <div
-          className={`trigger ${toggle ? "active" : ""}`}
-          onClick={() => setToggle(!toggle)}
-        >
-          <span />
-        </div> */}
-      {/* </div> */}
+      <div className="filter_point border-b-[1px] border-gray-300 px-6 py-5 text-left text-lg font-semibold transition dark:border-neutral-600 text-white">
+        Filters
+      </div>
       {attributes?.map((attribute) => (
         <Accordion.Item
           value={`item-${attribute.key}`}
