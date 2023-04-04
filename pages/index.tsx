@@ -10,6 +10,7 @@ import { useMediaQuery } from '@react-hookz/web'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
+const NEXT_PUBLIC_NAME = process.env.NEXT_PUBLIC_NAME
 // Environment variables
 // For more information about these variables
 // refer to the README.md file on this repository
@@ -62,6 +63,7 @@ const Home: NextPage<Props> = ({ fallback }) => {
   const tagline = metadata.tagline(TAGLINE)
 
   useEffect(() => {
+    console.log("RESERVOIR_API_KEY",RESERVOIR_API_KEY)
     if (REDIRECT_HOMEPAGE && COLLECTION) {
       router.push(`/collections/${COLLECTION}`)
     }
@@ -89,7 +91,7 @@ const Home: NextPage<Props> = ({ fallback }) => {
       <div className="col-span-full px-6 md:px-16">
         <div className="mb-9 flex w-full items-center justify-between">
           <div className="reservoir-h4 dark:text-white">
-            Trending Collections
+            Trending Collections {NEXT_PUBLIC_NAME}
           </div>
           {!isSmallDevice && <SortTrendingCollections />}
         </div>
