@@ -26,7 +26,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
               <li>
                 <div className="item">
                   <Link href="#" >
-                    <span className="icon">
+                    <span className="icon new-icon">
                       <img src="/img/wallet/metamask.png" alt="" />
                     </span>
                   </Link>
@@ -36,7 +36,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
               <li>
                 <div className="item">
                   <Link href="#" >
-                    <span className="icon">
+                    <span className="icon new-icon">
                       <img src="/img/wallet/coinbase.png" alt="" />
                     </span>
                   </Link>
@@ -46,7 +46,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
               <li>
                 <div className="item">
                   <Link href="#" >
-                    <span className="icon">
+                    <span className="icon new-icon">
                       <img src="/img/wallet/walletconnect.png" alt="" />
                     </span>
                   </Link>
@@ -56,7 +56,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
               <li>
                 <div className="item">
                   <Link href="#" >
-                    <span className="icon">
+                    <span className="icon new-icon">
                       <img src="/img/wallet/venly.png" alt="" />
                     </span>
                   </Link>

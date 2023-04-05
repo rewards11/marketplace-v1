@@ -62,7 +62,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
             >
 
               <li>
-                <Link href="https://rewards11.com/" onClick={() => navigationToggle(false)}>
+                <Link href="https://rewards11.com/" onClick={() => navigationToggle(false)} target={"_blank"}>
 
                   <span className="creative_link">Home</span>
 
@@ -85,7 +85,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
               </li>
 
               <li>
-                <Link href="http://rewards11.com/blog" onClick={() => navigationToggle(false)}>
+                <Link href="http://rewards11.com/blog" onClick={() => navigationToggle(false)} target={"_blank"}>
 
                   <span className="creative_link">Blog</span>
 
@@ -119,20 +119,24 @@ const Navigation = ({ navigation, navigationToggle }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://rewards11.com/website/social/facebook">
+                  <Link href="https://rewards11.com/website/social/facebook" target={"_blank"}>
                     <FaFacebook className="h-[20px] w-[25px]" />
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.instagram.com/inforewards_11">
+                  <Link href="https://www.instagram.com/inforewards_11" target={"_blank"}>
                     <FaInstagram className="h-[20px] w-[25px]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://youtube.com/@inforewards11/" target={"_blank"}>
+                    <FaYoutube className="h-[20px] w-[25px]" />
                   </Link>
                 </li>
 
 
-
                 <li>
-                  <Link href="https://www.linkedin.com/company/rewards11/">
+                  <Link href="https://www.linkedin.com/company/rewards11/" target={"_blank"}>
                     {/* <img
                       src="/svg/social/pinterest-1.svg"
                       alt=""
@@ -142,7 +146,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://github.com/rewards11/">
+                  <Link href="https://github.com/rewards11/" target={"_blank"}>
                     {/* <img
                       src="/svg/social/behance-1.svg"
                       alt=""
@@ -151,11 +155,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
                     <FaGithub className="h-[20px] w-[25px]" />
                   </Link>
                 </li>
-                <li>
-                  <Link href="https://www.youtube.com/@inforewards11/">
-                    <FaYoutube className="h-[20px] w-[25px]" />
-                  </Link>
-                </li>
+
               </ul>
             </div>
           </div>

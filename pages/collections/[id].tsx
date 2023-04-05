@@ -53,7 +53,7 @@ const COLLECTION_SET_ID = process.env.NEXT_PUBLIC_COLLECTION_SET_ID
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const Home: NextPage<Props> = ({ fallback, id }) => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const scrollRef = useRef<HTMLDivElement | null>(null)
@@ -118,6 +118,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
     { name: 'Items', id: 'items' },
     { name: 'Activity', id: 'activity' },
   ]
+  router.query.tab = 'items'
 
   return (
     <Layout navbar={{}}>
@@ -159,7 +160,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
               } */}
               {router.query?.tab?.toString() === 'items' ?
                 <div
-                  className={`trigger ${toggle ? "active" : ""}`}
+                  className={`trigger mt-[10px] ml-[10px] ${toggle ? "active" : ""}`}
                   onClick={() => setToggle(!toggle)}
                 >
                   <span />

@@ -55,7 +55,9 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
   const { chain: activeChain } = useNetwork()
 
   const dropdownItemClasses =
-    'reservoir-gray-dropdown-item flex gap-2 rounded-none border-b text-[#fff] last:border-b-0 dark:border-[#525252] dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800'
+  'metaportal_fn_button flex justify-center items-center gap-2 rounded-none border-b text-[#fff] last:border-b-0 dark:border-[#525252] dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800'
+
+    // 'reservoir-gray-dropdown-item flex gap-2 rounded-none border-b text-[#fff] last:border-b-0 dark:border-[#525252] dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800'
 
   useEffect(() => {
     const keys = Object.keys(router.query)
@@ -299,7 +301,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                   <DropdownMenu.Content
                     sideOffset={4}
                     align="start"
-                    className="metaportal_fn_button cursor-pointer btn-primary-outline rounded-lg border border-[#D4D4D4] text-[#fff] bg-[#2e1558] min-w-[172px] overflow-hidden shadow-md radix-side-bottom:animate-slide-down dark:border-[#525252] dark:bg-neutral-900 md:max-w-[422px]"
+                    className="cursor-pointer rounded-lg border border-[#D4D4D4] text-[#fff] bg-[#2e1558] min-w-[172px] overflow-hidden shadow-md radix-side-bottom:animate-slide-down dark:border-[#525252] dark:bg-neutral-900 md:max-w-[422px]"
                   >
                     <DropdownMenu.Item asChild>
                       <button 

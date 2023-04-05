@@ -122,9 +122,9 @@ const Navbar = ({ }) => {
           <div className="trigger_logo cursor-pointer">
 
             <div className="logo cursor-pointer">
-              <Link href="https://rewards11.com/" legacyBehavior={true} target="_blank" rel="noreferrer">
+              <Link href="https://rewards11.com/" target="_blank" rel="noreferrer">
 
-                <img style={{ maxWidth: 60 }} width={60} height={60} src='/rewards11nlogo.png' alt="" />
+                <img style={{ maxWidth: 60 }} width={60} height={60} src='/Rewards11perfectlogo.png' alt="" />
                
               </Link>
               <div className="title_logos">Home</div>

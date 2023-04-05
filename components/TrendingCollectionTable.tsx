@@ -108,7 +108,7 @@ const TrendingCollectionTable: FC<Props> = ({ fallback }) => {
                       </span>
                     </div>
                   </div> */}
-                  <div className="cc1 reservoir-h6 mr-6 dark:text-white">
+                  <div className="index-number reservoir-h6 mr-6 dark:text-white">
                     {index + 1}
                   </div>
                   <Link href={tokenHref} legacyBehavior={true}>
