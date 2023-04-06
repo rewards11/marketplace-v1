@@ -14,6 +14,7 @@ import ConnectWallet from "./ConnectWallet";
 import ThemeSwitcher from "./ThemeSwitcher";
 import HamburgerMenu from './HamburgerMenu'
 import { FaShoppingCart, FaWallet } from "react-icons/fa";
+import Image from "next/legacy/image";
 const Navbar = ({ }) => {
 
   useEffect(() => {
@@ -124,7 +125,7 @@ const Navbar = ({ }) => {
             <div className="logo cursor-pointer">
               <Link href="https://rewards11.com/" target="_blank" rel="noreferrer">
 
-                <img style={{ maxWidth: 60 }} width={60} height={60} src='/Rewards11perfectlogo.png' alt="" />
+                <Image style={{ maxWidth: 60 }} width={60} height={60} src='/Rewards11perfectlogo.png' alt="" />
                
               </Link>
               <div className="title_logos">Home</div>

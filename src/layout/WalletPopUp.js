@@ -2,6 +2,9 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { connect } from "react-redux";
 import { walletToggle } from "../redux/actions/siteSettings";
+import Image from "next/image";
+
+const NEXT_PUBLIC_TEST = process.env.NEXT_PUBLIC_TEST
 const WalletPopUp = ({ walletToggle, wallet }) => {
   return (
     <Fragment>
@@ -64,6 +67,19 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
                 </div>
               </li>
             </ul>
+          </div>
+          <div className="flex flex-row justify-center items-center mt-10">
+            <div className="flex flex-col">
+              <h1 style={{ fontSize: 12, color: '#fff', marginTop: 0, marginRight: 5 }}>
+                Powered by
+              </h1>
+              <h1 style={{ fontSize: 8, color: '#fff', marginRight: 5, textAlign: "end" }}>
+                {NEXT_PUBLIC_TEST}
+              </h1>
+            </div>
+            <div className="flex justify-center items-center">
+              <Image src="/Rewards11perfectlogo.png" style={{ width: 25, height: 25 }} width={25} height={25} alt="" />
+            </div>
           </div>
         </div>
       </div>
